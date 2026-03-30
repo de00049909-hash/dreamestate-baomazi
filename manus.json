@@ -1,0 +1,110 @@
+{
+  "name": "dreamestate-baomazi",
+  "title": "夢想不動產報馬仔",
+  "description": "專業房產推薦和查詢平台 - 實時房產信息、評論系統、地圖集成",
+  "version": "1.0.0",
+  "author": "Dream Estate Team",
+  
+  "deployment": {
+    "type": "web-db-user",
+    "runtime": "node",
+    "nodeVersion": "22",
+    "buildCommand": "pnpm install --frozen-lockfile && pnpm build",
+    "startCommand": "node dist/index.js",
+    "port": 3000,
+    "environment": "production"
+  },
+
+  "features": {
+    "database": true,
+    "authentication": true,
+    "fileStorage": true,
+    "customDomain": true,
+    "https": true,
+    "autoScaling": true
+  },
+
+  "environment": {
+    "NODE_ENV": "production",
+    "PORT": "3000"
+  },
+
+  "database": {
+    "type": "mysql",
+    "version": "8.0",
+    "name": "dreamestate_db",
+    "migrations": "pnpm db:push"
+  },
+
+  "domains": {
+    "primary": "dreamestate-baomazi.manus.space",
+    "aliases": [
+      "www.dreamestate-baomazi.manus.space"
+    ]
+  },
+
+  "ssl": {
+    "enabled": true,
+    "provider": "letsencrypt",
+    "autoRenew": true
+  },
+
+  "performance": {
+    "maxInstances": 5,
+    "minInstances": 2,
+    "cpuLimit": "1000m",
+    "memoryLimit": "1Gi",
+    "autoScale": true,
+    "scaleUpThreshold": 70,
+    "scaleDownThreshold": 30
+  },
+
+  "monitoring": {
+    "enabled": true,
+    "logRetention": 30,
+    "alerting": true,
+    "healthCheck": {
+      "path": "/",
+      "interval": 30,
+      "timeout": 10
+    }
+  },
+
+  "backup": {
+    "enabled": true,
+    "frequency": "daily",
+    "retention": 30
+  },
+
+  "security": {
+    "enableCors": true,
+    "corsOrigins": ["*"],
+    "rateLimit": {
+      "enabled": true,
+      "requestsPerMinute": 1000
+    },
+    "headers": {
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-XSS-Protection": "1; mode=block",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+    }
+  },
+
+  "integrations": {
+    "aws": {
+      "s3": true,
+      "region": "us-east-1"
+    },
+    "googleMaps": true,
+    "oauth": true
+  },
+
+  "metadata": {
+    "category": "real-estate",
+    "tags": ["房產", "推薦", "查詢", "地圖"],
+    "keywords": "房產,不動產,推薦,查詢,地圖",
+    "ogImage": "/og-image.png",
+    "favicon": "/favicon.ico"
+  }
+}

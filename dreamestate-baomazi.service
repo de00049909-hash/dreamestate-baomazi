@@ -1,0 +1,36 @@
+[Unit]
+Description=Dream Estate Baomazi - Real Estate Information Platform
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/dreamestate-baomazi
+Environment="NODE_ENV=production"
+Environment="PORT=3000"
+Environment="OAUTH_SERVER_URL=https://dreamestate-baomazi.manus.space"
+ExecStart=/usr/bin/node /var/www/dreamestate-baomazi/dist/index.js
+Restart=on-failure
+RestartSec=10
+StandardOutput=append:/var/log/dreamestate/out.log
+StandardError=append:/var/log/dreamestate/error.log
+
+# Process management
+KillMode=process
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+# Resource limits
+MemoryLimit=1G
+CPUQuota=80%
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/dreamestate-baomazi
+
+[Install]
+WantedBy=multi-user.target

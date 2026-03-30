@@ -1,0 +1,244 @@
+---
+# Namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dreamestate
+
+---
+# ConfigMap - 應用配置
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dreamestate-config
+  namespace: dreamestate
+data:
+  NODE_ENV: "production"
+  PORT: "3000"
+  APP_NAME: "夢想不動產報馬仔"
+  APP_URL: "https://dreamestate-baomazi.manus.space"
+
+---
+# Secret - 敏感信息
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dreamestate-secret
+  namespace: dreamestate
+type: Opaque
+stringData:
+  DATABASE_URL: "mysql://user:password@mysql:3306/dreamestate_db"
+  OAUTH_SERVER_URL: "https://dreamestate-baomazi.manus.space"
+  AWS_ACCESS_KEY_ID: "your_access_key"
+  AWS_SECRET_ACCESS_KEY: "your_secret_key"
+
+---
+# PersistentVolumeClaim - 資料庫存儲
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pvc
+  namespace: dreamestate
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+
+---
+# MySQL Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: dreamestate
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:8.0
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: dreamestate-secret
+              key: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_DATABASE
+          value: dreamestate_db
+        volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
+        livenessProbe:
+          exec:
+            command:
+            - mysqladmin
+            - ping
+            - -h
+            - localhost
+          initialDelaySeconds: 30
+          periodSeconds: 10
+      volumes:
+      - name: mysql-storage
+        persistentVolumeClaim:
+          claimName: mysql-pvc
+
+---
+# MySQL Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: dreamestate
+spec:
+  selector:
+    app: mysql
+  ports:
+  - port: 3306
+    targetPort: 3306
+  clusterIP: None
+
+---
+# Application Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dreamestate-app
+  namespace: dreamestate
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: dreamestate-app
+  template:
+    metadata:
+      labels:
+        app: dreamestate-app
+    spec:
+      containers:
+      - name: app
+        image: gcr.io/YOUR_PROJECT_ID/dreamestate-baomazi:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          name: http
+        envFrom:
+        - configMapRef:
+            name: dreamestate-config
+        - secretRef:
+            name: dreamestate-secret
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+
+---
+# Application Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: dreamestate-app
+  namespace: dreamestate
+spec:
+  type: LoadBalancer
+  selector:
+    app: dreamestate-app
+  ports:
+  - port: 80
+    targetPort: 3000
+    protocol: TCP
+    name: http
+  - port: 443
+    targetPort: 3000
+    protocol: TCP
+    name: https
+
+---
+# Horizontal Pod Autoscaler
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: dreamestate-hpa
+  namespace: dreamestate
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: dreamestate-app
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80
+
+---
+# Ingress - HTTPS 路由
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dreamestate-ingress
+  namespace: dreamestate
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - dreamestate-baomazi.manus.space
+    secretName: dreamestate-tls
+  rules:
+  - host: dreamestate-baomazi.manus.space
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dreamestate-app
+            port:
+              number: 80
