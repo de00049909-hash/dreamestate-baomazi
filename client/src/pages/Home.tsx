@@ -335,6 +335,7 @@ export default function Home() {
   const { identity, isLoaded, saveIdentity } = useVisitorIdentity();
 
   const [activeTab, setActiveTab] = useState("home");
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [message, setMessage] = useState("");
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   const [selectedPark, setSelectedPark] = useState<any>(null);
@@ -511,10 +512,11 @@ export default function Home() {
             </div>
           </div>
 
-          <nav className="flex gap-2 text-sm font-medium flex-wrap">
+          <nav className="flex gap-2 text-sm font-medium items-center" onClick={(e) => { if (!(e.target as HTMLElement).closest('.dropdown-wrapper')) setOpenDropdown(null); }}>
+            {/* 首頁 */}
             <button
-              onClick={() => setActiveTab("home")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
+              onClick={() => { setActiveTab("home"); setOpenDropdown(null); }}
+              className={`px-4 py-2 rounded-lg transition duration-200 whitespace-nowrap ${
                 activeTab === "home"
                   ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
                   : "text-gray-600 hover:bg-[#f0faf8]"
@@ -522,82 +524,96 @@ export default function Home() {
             >
               🏠 首頁
             </button>
+
+            {/* 探索桃園 下拉選單 */}
+            <div className="dropdown-wrapper relative">
+              <button
+                onClick={() => setOpenDropdown(openDropdown === "explore" ? null : "explore")}
+                className={`px-4 py-2 rounded-lg transition duration-200 flex items-center gap-1 whitespace-nowrap ${
+                  ["taoyuan","parks","childcare","libraries","arts"].includes(activeTab)
+                    ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
+                    : openDropdown === "explore"
+                    ? "bg-[#f0faf8] text-[#2eb89f]"
+                    : "text-gray-600 hover:bg-[#f0faf8]"
+                }`}
+              >
+                🗺️ 探索桃園
+                <span className={`text-[10px] transition-transform duration-200 inline-block ${ openDropdown === "explore" ? "rotate-180" : "" }`}>▼</span>
+              </button>
+              {openDropdown === "explore" && (
+                <div className="absolute top-[calc(100%+6px)] left-0 bg-white rounded-xl shadow-xl border border-gray-100 py-1.5 min-w-[140px] z-50">
+                  {[
+                    { key: "taoyuan", label: "📍 認識桃園" },
+                    { key: "parks",   label: "🎡 特色公園" },
+                    { key: "childcare", label: "👶 親子館" },
+                    { key: "libraries", label: "📚 圖書館" },
+                    { key: "arts",    label: "🎨 藝文活動" },
+                  ].map(item => (
+                    <button
+                      key={item.key}
+                      onClick={() => { setActiveTab(item.key); setOpenDropdown(null); }}
+                      className={`block w-full text-left px-4 py-2 text-sm transition duration-150 whitespace-nowrap ${
+                        activeTab === item.key
+                          ? "text-[#1f8b7f] font-semibold bg-[#f0faf8]"
+                          : "text-gray-700 hover:bg-[#f0faf8] hover:text-[#2eb89f]"
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* 便利生活 下拉選單 */}
+            <div className="dropdown-wrapper relative">
+              <button
+                onClick={() => setOpenDropdown(openDropdown === "life" ? null : "life")}
+                className={`px-4 py-2 rounded-lg transition duration-200 flex items-center gap-1 whitespace-nowrap ${
+                  ["transportation"].includes(activeTab)
+                    ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
+                    : openDropdown === "life"
+                    ? "bg-[#f0faf8] text-[#2eb89f]"
+                    : "text-gray-600 hover:bg-[#f0faf8]"
+                }`}
+              >
+                🏙️ 便利生活
+                <span className={`text-[10px] transition-transform duration-200 inline-block ${ openDropdown === "life" ? "rotate-180" : "" }`}>▼</span>
+              </button>
+              {openDropdown === "life" && (
+                <div className="absolute top-[calc(100%+6px)] left-0 bg-white rounded-xl shadow-xl border border-gray-100 py-1.5 min-w-[140px] z-50">
+                  <button
+                    onClick={() => { setActiveTab("transportation"); setOpenDropdown(null); }}
+                    className={`block w-full text-left px-4 py-2 text-sm transition duration-150 whitespace-nowrap ${
+                      activeTab === "transportation"
+                        ? "text-[#1f8b7f] font-semibold bg-[#f0faf8]"
+                        : "text-gray-700 hover:bg-[#f0faf8] hover:text-[#2eb89f]"
+                    }`}
+                  >
+                    🚆 交通運輸
+                  </button>
+                  <a
+                    href="/partner-shops"
+                    className="block w-full text-left px-4 py-2 text-sm transition duration-150 text-gray-700 hover:bg-[#f0faf8] hover:text-[#2eb89f] whitespace-nowrap"
+                    onClick={() => setOpenDropdown(null)}
+                  >
+                    🏪 特約商店
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* 在地情報 直連 */}
             <button
-              onClick={() => setActiveTab("taoyuan")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
-                activeTab === "taoyuan"
-                  ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
-                  : "text-gray-600 hover:bg-[#f0faf8]"
-              }`}
-            >
-              📍 認識桃園
-            </button>
-            <button
-              onClick={() => setActiveTab("parks")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
-                activeTab === "parks"
-                  ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
-                  : "text-gray-600 hover:bg-[#f0faf8]"
-              }`}
-            >
-              🎡 特色公園
-            </button>
-            <button
-              onClick={() => setActiveTab("childcare")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
-                activeTab === "childcare"
-                  ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
-                  : "text-gray-600 hover:bg-[#f0faf8]"
-              }`}
-            >
-              👶 親子館
-            </button>
-            <button
-              onClick={() => setActiveTab("libraries")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
-                activeTab === "libraries"
-                  ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
-                  : "text-gray-600 hover:bg-[#f0faf8]"
-              }`}
-            >
-              📚 圖書館
-            </button>
-            <button
-              onClick={() => setActiveTab("arts")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
-                activeTab === "arts"
-                  ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
-                  : "text-gray-600 hover:bg-[#f0faf8]"
-              }`}
-            >
-              🎨 藝文活動
-            </button>
-            <button
-              onClick={() => setActiveTab("transportation")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
-                activeTab === "transportation"
-                  ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
-                  : "text-gray-600 hover:bg-[#f0faf8]"
-              }`}
-            >
-              🚆 交通運輸
-            </button>
-            <button
-              onClick={() => setActiveTab("daily")}
-              className={`px-4 py-2 rounded-lg transition duration-200 ${
+              onClick={() => { setActiveTab("daily"); setOpenDropdown(null); }}
+              className={`px-4 py-2 rounded-lg transition duration-200 whitespace-nowrap ${
                 activeTab === "daily"
                   ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
                   : "text-gray-600 hover:bg-[#f0faf8]"
               }`}
             >
-              📰 每日報馬仔
+              📰 在地情報
             </button>
-            <a
-              href="/partner-shops"
-              className="px-4 py-2 rounded-lg transition duration-200 text-gray-600 hover:bg-[#f0faf8]"
-            >
-              🏪 特約商店
-            </a>
           </nav>
         </div>
       </header>
