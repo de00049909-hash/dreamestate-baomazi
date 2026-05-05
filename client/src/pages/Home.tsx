@@ -1354,6 +1354,68 @@ export default function Home() {
           </div>
         )}
 
+        {/* Food Tab - 美食推薦 */}
+        {activeTab === "food" && (
+          <div className="space-y-12">
+
+            {/* 親子餐廳區塊 */}
+            <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">
+                  🧒 親子餐廳
+                </h3>
+                <p className="text-gray-500 text-sm">精選桃園各區親子友善餐廳，有兒童遊戲區、主題佈置，讓全家用餐輕鬆又愉快！</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* 親子餐廳卡片 - 資料待填入 */}
+                <div className="bg-gradient-to-br from-[#f0faf8] to-white rounded-xl border border-[#e8f5f1] p-6 text-center">
+                  <div className="text-4xl mb-3">🍽️</div>
+                  <p className="text-[#2eb89f] font-semibold text-sm">親子餐廳資料整理中</p>
+                  <p className="text-gray-400 text-xs mt-1">即將為您帶來桃園最棒的親子餐廳推薦！</p>
+                </div>
+              </div>
+            </section>
+
+            {/* 寵物友善餐廳區塊 */}
+            <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">
+                  🐾 寵物友善餐廳
+                </h3>
+                <p className="text-gray-500 text-sm">允許攜帶毛孩入場，有寵物座位區或戶外空間，讓您與毛寶貝一起享用美食！</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* 寵物餐廳卡片 - 資料待填入 */}
+                <div className="bg-gradient-to-br from-[#f0faf8] to-white rounded-xl border border-[#e8f5f1] p-6 text-center">
+                  <div className="text-4xl mb-3">🐶</div>
+                  <p className="text-[#2eb89f] font-semibold text-sm">寵物友善餐廳資料整理中</p>
+                  <p className="text-gray-400 text-xs mt-1">即將為您帶來桃園最棒的寵物友善餐廳推薦！</p>
+                </div>
+              </div>
+            </section>
+
+            {/* 官方連結模組 */}
+            <section className="bg-gradient-to-br from-[#f0faf8] to-white rounded-2xl border border-[#e8f5f1] p-8 text-center">
+              <p className="text-gray-500 text-sm mb-4">💡 找好案、問行情，歡迎聯繫：</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="https://www.dreamestate.com.tw/" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#2eb89f] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#1f8b7f] transition">
+                  🌐 官網看精選
+                </a>
+                <a href="https://www.facebook.com/tthedreamestate/?locale=zh_TW" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 transition">
+                  👍 關注粉專
+                </a>
+                <a href="https://page.line.me/768fuhqm" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition">
+                  💬 加官方LINE
+                </a>
+              </div>
+            </section>
+
+          </div>
+        )}
+
         {/* Investment Advantages Dashboard */}
         {activeTab === "home" && (
           <div className="space-y-12">
