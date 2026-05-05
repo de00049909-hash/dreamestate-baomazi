@@ -138,27 +138,33 @@ const DAILY_CONTENT = {
     ],
   },
   Tuesday: {
-    title: "👨‍👩‍👧 桃園好康政策",
-    subtitle: "育兒、老人福利完善",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/3XsMQ8H580bE_f83a725d.webp",
+    title: "🌊 桃園旅遊觀光網",
+    subtitle: "桃園最完整的旅遊資訊平台",
+    image: "https://travel.tycg.gov.tw/Portals/0/Images/banner/banner1.jpg",
     content: [
       {
-        icon: "👶",
-        title: "企業育兒補貼加碼",
-        description: "勞動部 5 月 1 日起推動新制，每人每年最高補助 1 萬元。不限托育機構，保母、親友帶也能領！",
-        details: "勞動部推動的企業育兒補貼加碼方案，自 5 月 1 日起實施。每人每年最高補助 1 萬元，不限托育機構，保母、親友帶也能領。這項政策大幅減輕家庭育兒負擔，是在桃園養育孩子的一大優勢。",
+        icon: "🌄",
+        title: "山海景觀導覽",
+        description: "草漯沙丘、大溪老街、龍潭農村…桃園的自然美景讓人驚謚。",
+        details: "桃園旅遊觀光網是桃園市政府官方旅遊資訊平台，收錄全市所有景點、活動、美食、住宿資訊。山海景觀应有盡有，是規劃桃園旅遊的最佳起點。",
+        sourceUrl: "https://travel.tycg.gov.tw/",
+        sourceLabel: "桃園旅遊觀光網",
       },
       {
-        icon: "👴",
-        title: "敬老愛心卡優惠",
-        description: "年滿 65 歲享乘車優惠，每月自動驗證儲值補助 800 點社福點數。",
-        details: "年滿 65 歲的長者可申辦敬老愛心卡，享受乘車優惠。每月自動驗證儲值補助 800 點社福點數，可用於公車、捷運等交通費用。這項福利照顧銀髮族的日常生活，是桃園市政府的溫暖政策。",
+        icon: "🎉",
+        title: "活動訊息日曆",
+        description: "全年不斷的展演活動、季節活動、地方節氣…小編幫你抄作業！",
+        details: "桃園旅遊觀光網的活動日曆整合全市各區的活動訊息，包括展覽、音樂演出、季節活動、地方節氣等。小編定期整理最新活動資訊，幫你輕鬆掃就桃園周末行程！",
+        sourceUrl: "https://travel.tycg.gov.tw/zh-tw/event/calendar/",
+        sourceLabel: "桃園旅遊觀光網活動日曆",
       },
       {
-        icon: "🏥",
-        title: "中低收入老人津貼",
-        description: "符合條件長者每月可領取生活津貼，照顧銀髮族生活。",
-        details: "桃園市政府提供中低收入老人津貼，符合條件的長者每月可領取生活津貼。此項政策照顧銀髮族的日常生活，減輕家庭經濟負擔。如有需要，可向各區公所提出申請。",
+        icon: "🍼",
+        title: "美食地圖導覽",
+        description: "大溪豆干、龍潭花生糖、山地農特產…桃園美食地圖一次看尽！",
+        details: "桃園旅遊觀光網的美食專區收錄各區特色美食，包括大溪豆干、龍潭花生糖、山地農特產、各區特色小吃等。計劃桃園美食之旅，一定要看這裡！",
+        sourceUrl: "https://travel.tycg.gov.tw/zh-tw/food/",
+        sourceLabel: "桃園旅遊觀光網美食專區",
       },
     ],
   },
@@ -625,15 +631,86 @@ const RESTAURANTS = {
 };
 
 const CINEMAS = [
-  { name: "桃園藝術電影院", location: "桃園區", feature: "政府建立的免費電影院", details: "桃園市政府建立的免費電影院，提供市民免費觀看電影的場所。定期放映各類型電影，是桃園重要的文化設施。", website: "https://www.taoyuan.arts-cinema.com/" },
-  { name: "中壢光影電影館", location: "中壢區", feature: "電影放映、文藝電影", details: "中壢地區的電影院，提供各類型電影放映服務。", website: "https://www.taoyuan.arts-cinema.com/" },
+  {
+    name: "桃園光影文化館（光影二館）",
+    location: "桃園區",
+    address: "桃園市桃園區先福路1號",
+    feature: "藝術電影、主題影展、免費入場",
+    hours: "週二至週日 09:00-21:00（週一休館）",
+    phone: "03-337-7745",
+    details: "桃園光影文化館以推廣電影教育為定位，提供市民日常休閒及培養藝術賞析的影像空間，以人文藝術、懷舊、親子及主題等影像放映活動為營運目標。免費入場，歡迎闔家蒞臨。",
+    website: "https://tyac2.afmc.gov.tw/",
+    mapUrl: "https://www.google.com/maps/place/%E6%A1%83%E5%9C%92%E5%85%89%E5%BD%B1%E6%96%87%E5%8C%96%E9%A4%A8/@25.0052,121.3043,17z",
+    image: "/cinema-taoyuan-arts.webp",
+    latestNews: [
+      { date: "2026-05", title: "主題影展【當世界從此地發聲】5-6月預告" },
+      { date: "2026-04", title: "主題影展【孩想要長大】3-4月預告" },
+    ]
+  },
+  {
+    name: "中壢光影電影館（光影一館）",
+    location: "中壢區",
+    address: "桃園市中壢區龍清街116巷31號",
+    feature: "免費電影放映、電影靜態展示",
+    hours: "每日 13:00-21:00（週一休館）",
+    details: "中壢光影電影館位於中壢龍岡地區，原為馬祖新村活動中心，於2015年十月改建為標準電影院。除週一公休外，每天播放免費電影，並有電影靜態展示區，不定期換展，歡迎闔家蒞臨。",
+    website: "https://www.taoyuan.arts-cinema.com/",
+    mapUrl: "https://www.google.com/maps/place/%E4%B8%AD%E5%A3%A2%E5%85%89%E5%BD%B1%E9%9B%BB%E5%BD%B1%E9%A4%A8/@24.9667,121.2167,17z",
+    image: "/cinema-zhongli.webp",
+    latestNews: [
+      { date: "2026-04-23", title: "2026 05月主題影展｜被書寫的目光" },
+      { date: "2026-03-24", title: "2026 04月主題影展｜親親同樂會" },
+    ]
+  },
 ];
 
 const WOMENS_CENTERS = [
-  { name: "桃園市婦女館", location: "桃園區", address: "桃園市桃園區延平路", phone: "03-3627-555", feature: "免費課程、體適能中心", hours: "依課程時間", details: "提供免費課程、體適能健身中心、多元婦女福利服務。每期雙月課程表。", website: "http://www.womencenter.com.tw/" },
-  { name: "桃園市北區婦女中心", location: "桃園區", feature: "免費課程、講座、展覽", details: "提供特殊境遇家庭服務、福利諮詢、婦女學苑、女性講座、性別議題展覽、女性友善空間租借。114年4-6月免費活動。", website: "https://www.taoyuanwdc.org/", facebook: "https://www.facebook.com/taoyuanwdc/" },
-  { name: "桃園市南區婦女中心", location: "平鎮區", feature: "免費課程、講座、展覽", details: "提供類似北區婦女中心的服務。114年4-6月免費活動。", website: "https://www.taoyuansdwc.org/", facebook: "https://www.facebook.com/taoyuansdwc/" },
-  { name: "桃園市婦女培力中心", location: "桃園市", feature: "免費活動課程", details: "提供免費活動課程。課程內容包括走訪在地、自我成長、藝文共學、健身課程等。", website: "https://www.facebook.com/tytaosis/" },
+  {
+    name: "桃園市北區婦女中心",
+    location: "桃園區",
+    address: "桃園市桃園區永安路一段325號",
+    phone: "03-364-8213",
+    feature: "免費課程、講座、展覽、女性友善空間",
+    hours: "週一至週五 09:00-17:00",
+    details: "提供特殊境遇家庭服務、福利詮詢、婦女學苑、女性講座、性別議題展覽、女性友善空間租借。每期免費課程表定期更新。",
+    website: "https://www.taoyuanwdc.org/Main.aspx",
+    facebook: "https://www.facebook.com/taoyuanwdc/",
+    mapUrl: "https://www.google.com/maps/place/%E6%A1%83%E5%9C%92%E5%B8%82%E5%8C%97%E5%8D%80%E5%A9%A6%E5%A5%B3%E4%B8%AD%E5%BF%83/@25.0034,121.3098,17z",
+    image: "/womens-center-north.webp",
+    latestNews: [
+      { date: "2026-05-05", title: "WOMEN電影院《日安，我的母親》放映活動" },
+      { date: "2026-05-04", title: "主題講座-調味｜女性健康系列" },
+      { date: "2026-04-29", title: "母親節特別企劃｜女力無限" },
+    ]
+  },
+  {
+    name: "桃園市南區婦女中心",
+    location: "平鎮區",
+    address: "桃園市平鎮區延平路二段十五巷十五弄乌號",
+    phone: "03-494-3567",
+    feature: "免費課程、講座、展覽、女性友善空間",
+    hours: "週一至週五 09:00-17:00",
+    details: "提供女性專案服務、婦女學苑、女性講座、性別議題展覽、女性友善空間租借。每期免費課程表定期更新。",
+    website: "https://www.taoyuansdwc.org/",
+    facebook: "https://www.facebook.com/taoyuansdwc/",
+    mapUrl: "https://www.google.com/maps/place/%E6%A1%83%E5%9C%92%E5%B8%82%E5%8D%97%E5%8D%80%E5%A9%A6%E5%A5%B3%E4%B8%AD%E5%BF%83/@24.9604,121.2156,17z",
+    image: "/womens-center-south.webp",
+    latestNews: [
+      { date: "2026-05", title: "母親節系列活動｜愛的小馬步伐你走" },
+      { date: "2026-04", title: "兒童繪本性平小時光｜講座報名中" },
+    ]
+  },
+  {
+    name: "桃園市婦女培力中心",
+    location: "桃園市",
+    feature: "免費活動課程、女性賦能",
+    details: "提供免費活動課程。課程內容包括走訪在地、自我成長、藝文共學、健身課程等。",
+    website: "https://www.facebook.com/tytaosis/",
+    mapUrl: "https://www.google.com/maps/search/%E6%A1%83%E5%9C%92%E5%B8%82%E5%A9%A6%E5%A5%B3%E5%9F%B9%E5%8A%9B%E4%B8%AD%E5%BF%83",
+    latestNews: [
+      { date: "2026-04", title: "健身課程系列｜女性健康新趣味" },
+    ]
+  },
 ];
 
 const FEATURED_EVENTS = [
@@ -1358,19 +1435,64 @@ export default function Home() {
 
             {/* Cinemas */}
             <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-8">🎬 電影院</h3>
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-8">🎬 免費光影電影館</h3>
+              {/* 最新消息輪播 */}
+              <div className="mb-6 bg-[#f0faf8] rounded-xl p-4 border border-[#e8f5f1] overflow-hidden">
+                <p className="text-xs text-[#1f8b7f] font-bold mb-2">📢 最新消息</p>
+                <div className="space-y-1">
+                  {[...CINEMAS.flatMap((c: any) => (c.latestNews || []).map((n: any) => ({ ...n, from: c.name })))]
+                    .slice(0, 4)
+                    .map((news: any, i: number) => (
+                      <div key={i} className="flex items-start gap-2 text-xs text-gray-600">
+                        <span className="text-[#2eb89f] font-semibold flex-shrink-0">{news.date}</span>
+                        <span className="flex-shrink-0 text-gray-400">【{news.from}】</span>
+                        <span>{news.title}</span>
+                      </div>
+                    ))}
+                </div>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {CINEMAS.map((cinema: any, idx: number) => (
-                  <div 
-                    key={idx} 
-                    onClick={() => setSelectedEvent(cinema)}
-                    className="bg-gradient-to-br from-[#f0faf8] to-white p-6 rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 hover:translate-y-[-4px] cursor-pointer"
-                  >
-                    <h4 className="text-lg font-bold text-[#1f8b7f] mb-2">{cinema.name}</h4>
-                    <p className="text-gray-600 text-sm mb-2">📍 {cinema.location}</p>
-                    <p className="text-gray-600 text-sm mb-2">{cinema.feature}</p>
-                    {cinema.hours && <p className="text-xs text-gray-500 mb-2">⏰ {cinema.hours}</p>}
-                    <p className="text-xs text-[#2eb89f] font-medium">👉 點擊查看詳情</p>
+                  <div key={idx} className="bg-white rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 overflow-hidden">
+                    {cinema.image && (
+                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${cinema.image})`}}>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                          <h4 className="text-base font-bold">{cinema.name}</h4>
+                          <p className="text-xs opacity-80">📍 {cinema.address}</p>
+                        </div>
+                      </div>
+                    )}
+                    {!cinema.image && (
+                      <div className="bg-gradient-to-br from-[#f0faf8] to-white p-4 border-b border-[#e8f5f1]">
+                        <h4 className="text-lg font-bold text-[#1f8b7f]">{cinema.name}</h4>
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <p className="text-sm text-[#2eb89f] font-medium mb-1">{cinema.feature}</p>
+                      {cinema.hours && <p className="text-xs text-gray-500 mb-1">⏰ {cinema.hours}</p>}
+                      {cinema.phone && <p className="text-xs text-gray-500 mb-2">📞 {cinema.phone}</p>}
+                      <p className="text-xs text-gray-600 mb-3 leading-relaxed line-clamp-2">{cinema.details}</p>
+                      <div className="flex gap-2 flex-wrap">
+                        {cinema.website && (
+                          <a href={cinema.website} target="_blank" rel="noopener noreferrer"
+                            className="inline-block px-3 py-1.5 bg-teal-500 text-white text-xs font-bold rounded-lg hover:bg-teal-600 transition shadow-sm">
+                            🌐 官網
+                          </a>
+                        )}
+                        {(cinema.mapUrl || cinema.address) && (
+                          <a href={cinema.mapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cinema.address)}`}
+                            target="_blank" rel="noopener noreferrer"
+                            className="inline-block px-3 py-1.5 bg-blue-500 text-white text-xs font-bold rounded-lg hover:bg-blue-600 transition shadow-sm">
+                            🗺️ 查看地圖
+                          </a>
+                        )}
+                        <button onClick={() => setSelectedEvent(cinema)}
+                          className="inline-block px-3 py-1.5 bg-gray-100 text-gray-600 text-xs font-bold rounded-lg hover:bg-gray-200 transition">
+                          👉 詳情
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -1379,18 +1501,69 @@ export default function Home() {
             {/* Women's Centers */}
             <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
               <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-8">👩 婦女中心 & 免費課程</h3>
+              {/* 最新消息輪播 */}
+              <div className="mb-6 bg-[#f0faf8] rounded-xl p-4 border border-[#e8f5f1]">
+                <p className="text-xs text-[#1f8b7f] font-bold mb-2">📢 最新消息</p>
+                <div className="space-y-1">
+                  {[...WOMENS_CENTERS.flatMap((c: any) => (c.latestNews || []).map((n: any) => ({ ...n, from: c.name })))]
+                    .slice(0, 5)
+                    .map((news: any, i: number) => (
+                      <div key={i} className="flex items-start gap-2 text-xs text-gray-600">
+                        <span className="text-[#2eb89f] font-semibold flex-shrink-0">{news.date}</span>
+                        <span className="flex-shrink-0 text-gray-400">【{news.from}】</span>
+                        <span>{news.title}</span>
+                      </div>
+                    ))}
+                </div>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {WOMENS_CENTERS.map((center: any, idx: number) => (
-                  <div 
-                    key={idx} 
-                    onClick={() => setSelectedEvent(center)}
-                    className="bg-gradient-to-br from-[#f0faf8] to-white p-6 rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 hover:translate-y-[-4px] cursor-pointer"
-                  >
-                    <h4 className="text-lg font-bold text-[#1f8b7f] mb-2">{center.name}</h4>
-                    <p className="text-gray-600 text-sm mb-2">📍 {center.location}</p>
-                    <p className="text-gray-600 text-sm mb-2">{center.feature}</p>
-                    {center.phone && <p className="text-gray-600 text-sm mb-2">📞 {center.phone}</p>}
-                    <p className="text-xs text-[#2eb89f] font-medium">👉 點擊查看詳情</p>
+                  <div key={idx} className="bg-white rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 overflow-hidden">
+                    {center.image && (
+                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${center.image})`}}>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                          <h4 className="text-base font-bold">{center.name}</h4>
+                          <p className="text-xs opacity-80">📍 {center.address || center.location}</p>
+                        </div>
+                      </div>
+                    )}
+                    {!center.image && (
+                      <div className="bg-gradient-to-br from-[#f0faf8] to-white p-4 border-b border-[#e8f5f1]">
+                        <h4 className="text-lg font-bold text-[#1f8b7f]">{center.name}</h4>
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <p className="text-sm text-[#2eb89f] font-medium mb-1">{center.feature}</p>
+                      {center.hours && <p className="text-xs text-gray-500 mb-1">⏰ {center.hours}</p>}
+                      {center.phone && <p className="text-xs text-gray-500 mb-2">📞 {center.phone}</p>}
+                      <p className="text-xs text-gray-600 mb-3 leading-relaxed line-clamp-2">{center.details}</p>
+                      <div className="flex gap-2 flex-wrap">
+                        {center.website && (
+                          <a href={center.website} target="_blank" rel="noopener noreferrer"
+                            className="inline-block px-3 py-1.5 bg-teal-500 text-white text-xs font-bold rounded-lg hover:bg-teal-600 transition shadow-sm">
+                            🌐 官網
+                          </a>
+                        )}
+                        {(center.mapUrl || center.address) && (
+                          <a href={center.mapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(center.address)}`}
+                            target="_blank" rel="noopener noreferrer"
+                            className="inline-block px-3 py-1.5 bg-blue-500 text-white text-xs font-bold rounded-lg hover:bg-blue-600 transition shadow-sm">
+                            🗺️ 查看地圖
+                          </a>
+                        )}
+                        {center.facebook && (
+                          <a href={center.facebook} target="_blank" rel="noopener noreferrer"
+                            className="inline-block px-3 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-lg hover:bg-blue-700 transition shadow-sm">
+                            👍 FB粉專
+                          </a>
+                        )}
+                        <button onClick={() => setSelectedEvent(center)}
+                          className="inline-block px-3 py-1.5 bg-gray-100 text-gray-600 text-xs font-bold rounded-lg hover:bg-gray-200 transition">
+                          👉 詳情
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -1859,12 +2032,44 @@ export default function Home() {
                   allowFullScreen
                 ></iframe>
               </div>
+              {/* 桃園旅遊觀光網連結區 */}
+              <div className="mb-4 bg-gradient-to-r from-teal-50 to-blue-50 rounded-xl p-4 border border-teal-100">
+                <p className="text-sm text-[#1f8b7f] font-bold mb-3">🌊 桃園旅遊觀光網 — 官方旅遊資訊平台</p>
+                <div className="flex flex-wrap gap-2">
+                  <a href="https://travel.tycg.gov.tw/" target="_blank" rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-teal-500 text-white text-sm font-bold rounded-lg hover:bg-teal-600 transition shadow-sm">
+                    🌐 旅遊觀光網首頁
+                  </a>
+                  <a href="https://travel.tycg.gov.tw/zh-tw/event/calendar/" target="_blank" rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-bold rounded-lg hover:bg-blue-600 transition shadow-sm">
+                    📅 活動日曆
+                  </a>
+                  <a href="https://travel.tycg.gov.tw/zh-tw/food/" target="_blank" rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-orange-500 text-white text-sm font-bold rounded-lg hover:bg-orange-600 transition shadow-sm">
+                    🍼 美食地圖
+                  </a>
+                  <a href="https://travel.tycg.gov.tw/zh-tw/attraction/" target="_blank" rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-purple-500 text-white text-sm font-bold rounded-lg hover:bg-purple-600 transition shadow-sm">
+                    🌄 景點導覽
+                  </a>
+                </div>
+              </div>
+              {/* 糖糖小編說話框 — 可随時更改文字 */}
               <div className="bg-[#f0faf8] rounded-xl p-4 border border-[#e8f5f1]">
-                <p className="text-sm text-[#1f8b7f] font-semibold mb-1">💡 小編小証言</p>
-                <p className="text-gray-600 text-sm">桃園不只是住家的地方，更是週末出遊的天堂！山、海、古街、小市集、小店家…每個週末都有新驚喜。歡迎加官方 LINE 詢問旅遊資訊！</p>
-                <a href="https://page.line.me/768fuhqm" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 px-4 py-2 bg-[#2eb89f] text-white text-sm font-bold rounded-lg hover:bg-[#1f8b7f] transition">
-                  💬 加 LINE 詢問旅遊資訊
-                </a>
+                <div className="flex items-start gap-4">
+                  <img
+                    src="/tangtang-editor.png"
+                    alt="糖糖小編"
+                    className="w-20 h-20 object-cover rounded-xl flex-shrink-0 shadow-md"
+                  />
+                  <div className="flex-1">
+                    <p className="text-sm text-[#1f8b7f] font-bold mb-1">💬 糖糖小編說</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">桃園不只是住家的地方，更是週末出遲的天堂！山、海、古街、小市集、小店家…每個週末都有新驚喜。歡迎加官方 LINE 詢問旅遊資訊！</p>
+                    <a href="https://page.line.me/768fuhqm" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 px-4 py-2 bg-[#2eb89f] text-white text-sm font-bold rounded-lg hover:bg-[#1f8b7f] transition">
+                      💬 加 LINE 詢問旅遊資訊
+                    </a>
+                  </div>
+                </div>
               </div>
             </section>
 
