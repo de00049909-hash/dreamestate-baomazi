@@ -618,7 +618,7 @@ const RESTAURANTS = {
       address: "桃園市桃園區",
       hours: "10:30–19:00（週三公休）",
       feature: "寵物鳥友善咖啡麵食館！無毒原木棲木、招牌重慶酸辣粉與手沖咖啡，鳥寶貝可同行入場",
-      unsplashImage: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
+      unsplashImage: "/restaurants/bird_cafe_parrot.jpg",
       website: "https://www.facebook.com/birdcoffee.tw/",
       mapUrl: "https://maps.google.com/?q=鳥仔咖+Bird+Coffee+桃園"
     }
