@@ -521,106 +521,105 @@ const MUSEUMS = [
 const RESTAURANTS = {
   family: [
     {
-      name: "Bébé 親子餐廳",
-      address: "桃園市桃園區大業路一段 1 號（新光三越 B1）",
-      hours: "11:00-21:00（週一至週日）",
-      feature: "室內大型遊樂區、溜滑梯、積木角、親子套餐，推車友善，適合 0-10 歲",
-      image: "https://lh3.googleusercontent.com/p/AF1QipN1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo=s1600",
+      name: "NICE to MEET U NEWBORN & CAFE'",
+      address: "桃園市桃園區經國二路 98 號 1 樓（忠泰幸社區）",
+      hours: "週六、週日及國定假日 11:00–18:00（平日僅開放店內取貨）",
+      feature: "桃園最知名寶寶友善咖啡廳！設有嬰兒床、哺乳室、推車停放區，提供 6 個月以上副食品，適合新生兒家庭",
       unsplashImage: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市桃園區大業路一段1號"
+      website: "https://www.ntmucafe.com/",
+      mapUrl: "https://www.google.com/maps/place/NICE+to+MEET+U+NEWBORN+%26+CAFE'/@25.0304398,121.2983561,17z/data=!3m1!4b1!4m6!3m5!1s0x34681f3a7de81637:0x398da2a800f9d637!8m2!3d25.0304398!4d121.2983561"
     },
     {
-      name: "小豬寶親子主題餐廳",
-      address: "桃園市中壢區中央西路二段 36 號",
-      hours: "11:00-20:00（週二公休）",
-      feature: "農場主題室內遊樂、小火車、沙坑、兒童餐具組，提供哺乳室與尿布台",
+      name: "微笑咖啡 Smile Café",
+      address: "桃園市中壢區新生路三段 111 號",
+      hours: "週一至週日 11:00–19:30",
+      feature: "中壢超人氣親子餐廳！三層樓空間，設有球池、溜滑梯、攀爬區，義式料理水準高，兒童餐選項豐富",
       unsplashImage: "https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市中壢區中央西路二段36號"
+      website: "https://www.smilecafe.com.tw/",
+      mapUrl: "https://www.google.com/maps/place/%E5%BE%AE%E7%AC%91%E5%92%96%E5%95%A1/@24.989756,121.2216545,17z/data=!3m1!4b1!4m6!3m5!1s0x34682157f8023e9f:0x13568c4773af38fa!8m2!3d24.989756!4d121.2216545"
     },
     {
-      name: "旋轉木馬親子廚房",
-      address: "桃園市八德區介壽路一段 728 號",
-      hours: "10:30-20:30（週三公休）",
-      feature: "歐式童話佈置、兒童烹飪體驗課程、DIY 手作、適合 3-12 歲",
+      name: "cafe 4 fun 咖啡趣",
+      address: "桃園市桃園區信光路 52 號",
+      hours: "週一至週日 11:00–20:30",
+      feature: "桃園金牌好店！2 層樓遊樂區含球池、溜滑梯，義式料理份量足，草莓麻糬鬆餅必吃，適合 0–10 歲親子",
       unsplashImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市八德區介壽路一段728號"
+      website: "https://www.cafe4fun.com/",
+      mapUrl: "https://www.google.com/maps/place/cafe+4+fun%E5%92%96%E5%95%A1%E8%B6%A3+%E6%A1%83%E5%9C%92%E9%87%91%E7%89%8C%E5%A5%BD%E5%BA%97%E8%A6%AA%E5%AD%90%E9%A4%90%E5%BB%B3/@25.005984,121.30689,17z/data=!3m1!4b1!4m6!3m5!1s0x34681fab6a34d937:0xbe9fd1e9abcf5731!8m2!3d25.005984!4d121.30689"
     },
     {
-      name: "森林系親子餐廳 La Forêt",
-      address: "桃園市蘆竹區南崁路一段 112 號",
-      hours: "11:00-21:00（全年無休）",
-      feature: "大型室內叢林攀爬架、球池、投影互動牆、義式料理，停車方便",
+      name: "玩逗樹咖啡 中原店",
+      address: "桃園市中壢區新中北路 526 號（中原埤塘生態公園內）",
+      hours: "週一至週日 11:00–23:30",
+      feature: "埤塘公園景觀咖啡廳，空間超寬敞，桌遊豐富，寵物友善，適合親子聚會與小孩放電，平日不限時",
       unsplashImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市蘆竹區南崁路一段112號"
+      website: "https://m.facebook.com/wandoshu/",
+      mapUrl: "https://www.google.com/maps/place/%E7%8E%A9%E9%80%97%E6%A8%B9%E5%92%96%E5%95%A1-%E4%B8%AD%E5%8E%9F%E5%BA%97/@24.9570722,121.245429,17z/data=!3m1!4b1!4m6!3m5!1s0x3468239412694a23:0x7d4069d6a0312a85!8m2!3d24.9570722!4d121.245429"
     },
     {
-      name: "玩色工坊親子美食館",
-      address: "桃園市龜山區文化二路 66 號",
-      hours: "10:00-20:00（週一公休）",
-      feature: "美術主題、兒童畫畫區、黏土 DIY、適合喜愛藝術的親子家庭",
+      name: "川御燒肉專門店（親子友善）",
+      address: "桃園市桃園區中埔六街 129 號 1 樓",
+      hours: "週一至週三、週五 17:30–01:00；週六、週日 11:30–15:00、17:00–01:00（週四公休）",
+      feature: "親子友善燒肉店，訂位時提前告知可安排兒童座椅，高品質和牛燒肉，適合家庭聚餐慶生",
       unsplashImage: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市龜山區文化二路66號"
+      website: "https://www.facebook.com/chuanyu.yakiniku/",
+      mapUrl: "https://www.google.com/maps/place/%E5%B7%9D%E5%BE%A1%E7%87%92%E8%82%89%E5%B0%88%E9%96%80%E5%BA%97-%E6%A1%83%E5%9C%92%E7%B8%BD%E5%BA%97/@25.0180936,121.2952335,17z/data=!3m1!4b1!4m6!3m5!1s0x34681f790f5d7d11:0xdccc799c74b1df16!8m2!3d25.0180936!4d121.2952335"
     }
   ],
   pet: [
     {
       name: "川御燒肉專門店",
       address: "桃園市桃園區中埔六街 129 號 1 樓",
-      hours: "週一至週五 17:30–01:00、週六週日 11:30–15:00、17:00–01:00（週四公休）",
-      feature: "寵物友善燒肉店，訂位時提前告知攜帶寵物可獲贈寵物鮮食，超貼心！",
+      hours: "週一至週三、週五 17:30–01:00；週六、週日 11:30–15:00、17:00–01:00（週四公休）",
+      feature: "寵物友善燒肉店！訂位時提前告知攜帶寵物，可安排寵物友善座位，高品質和牛燒肉，是桃園毛孩家長的聚餐首選",
       unsplashImage: "https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市桃園區中埔六街129號"
+      website: "https://www.facebook.com/chuanyu.yakiniku/",
+      mapUrl: "https://www.google.com/maps/place/%E5%B7%9D%E5%BE%A1%E7%87%92%E8%82%89%E5%B0%88%E9%96%80%E5%BA%97-%E6%A1%83%E5%9C%92%E7%B8%BD%E5%BA%97/@25.0180936,121.2952335,17z/data=!3m1!4b1!4m6!3m5!1s0x34681f790f5d7d11:0xdccc799c74b1df16!8m2!3d25.0180936!4d121.2952335"
     },
     {
-      name: "囍鍋子",
-      address: "桃園市大園區領航北路四段 358 號",
-      hours: "週一至週日 11:30–14:00、17:00–20:30（週四公休）",
-      feature: "青埔寵物友善火鍋店，台式復古風格，攜帶寵物用餐免費招待一份寵物餐食",
+      name: "此木CIMU 寵物友善餐廳",
+      address: "桃園市中壢區興仁路二段 67 巷 38 號",
+      hours: "週三至週日 11:00–18:00（週一、週二公休）",
+      feature: "Google 4.8 星高評分！義大利麵、輕食、早午餐、巴斯克蛋糕，老闆會招待毛孩鮮食小餅乾，柴犬店長超萌",
       unsplashImage: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市大園區領航北路四段358號"
+      website: "https://www.instagram.com/cimu_restaurant/",
+      mapUrl: "https://www.google.com/maps/place/%E6%AD%A4%E6%9C%A8CIMU+%E5%AF%B5%E7%89%A9%E5%8F%8B%E5%96%84%E9%A4%90%E5%BB%B3%EF%BD%9C%E7%BE%A9%E5%A4%A7%E5%88%A9%E9%BA%B5+%E8%BC%95%E9%A3%9F+%E6%97%A9%E5%8D%88%E9%A4%90+%E5%B7%B4%E6%96%AF%E5%85%8B%E8%9B%8B%E7%B3%95%EF%BD%9C/@25.0040642,121.2076766,17z/data=!3m1!4b1!4m6!3m5!1s0x34681fab6a34d937:0xbe9fd1e9abcf5731"
     },
     {
-      name: "食。光機",
+      name: "食。光機（寵物不落地）",
       address: "桃園市中壢區大華路 93 號",
-      hours: "週一至週日 11:00–21:00（週二公休）",
-      feature: "七隻狗狗店長坐鎮！義式料理水準高，寵物不可落地，環境溫馨可愛",
+      hours: "週三至週一 11:00–21:00（週二公休）",
+      feature: "七隻大型犬店長坐鎮！義式料理水準高，寵物不可落地，可花 100 元買零食餵狗，環境溫馨超療癒",
       unsplashImage: "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市中壢區大華路93號"
+      website: "https://www.facebook.com/shiguangji.pet/",
+      mapUrl: "https://www.google.com/maps/place/%E9%A3%9F%E3%80%82%E5%85%89%E6%A9%9F%EF%BC%88%E5%AF%B5%E7%89%A9%E4%B8%8D%E8%90%BD%E5%9C%B0%EF%BC%89/@24.9792009,121.2589223,17z/data=!3m1!4b1!4m6!3m5!1s0x34682204437d5fb1:0xefc19e250215b542!8m2!3d24.9792009!4d121.2589223"
     },
     {
       name: "霧夜 Nafu Cafe",
       address: "桃園市桃園區新埔七街 22 號",
-      hours: "週一至週日 10:30–21:00",
-      feature: "清水模文青建築、寵物可落地需牽繩、店貓親人、提供各式煮食及甜點",
+      hours: "週二至週日 11:00–20:00（週一公休）",
+      feature: "清水模文青建築、店貓超親人、寵物可落地需牽繩，燉飯與肉桂捲超人氣，LGBTQ+ 友善空間",
       unsplashImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市桃園區新埔七街22號"
+      website: "https://www.instagram.com/nafu_cafe/",
+      mapUrl: "https://www.google.com/maps/place/%E9%9C%A7%E5%A4%9C/@25.0190467,121.3021696,17z/data=!3m1!4b1!4m6!3m5!1s0x34681fdefeb3dbc3:0xb0aebe824b872d63!8m2!3d25.0190467!4d121.3021696"
     },
     {
-      name: "莫平方寵物咖啡 mo² caf'e",
+      name: "莫平方寵物咖啡廳",
       address: "桃園市中壢區文昌路 225 巷 32 弄 16 號",
-      hours: "週一至週日 12:00–17:00（週二週三公休）",
-      feature: "柯基店狗超萌！有毛寶貝餐、限量烘烤肉乾、犬貓專用鮮乳，寵物需牽繩或裝籠",
+      hours: "週四至週一 12:00–17:00（週二、週三公休）",
+      feature: "貓貓狗狗超親人！流沙卡布必點，有毛寶貝餐與犬貓鮮食，寵物需牽繩或裝籠，空間舒適適合下午茶",
       unsplashImage: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
-      website: "https://www.facebook.com/",
-      mapUrl: "https://maps.google.com/?q=桃園市中壢區文昌路225巷32弄16號"
+      website: "https://www.instagram.com/mo2cafe/",
+      mapUrl: "https://www.google.com/maps/place/%E8%8E%AB%E5%B9%B3%E6%96%B9%E5%AF%B5%E7%89%A9%E5%92%96%E5%95%A1%E5%BB%B3/@25.0040642,121.2076766,17z/data=!3m1!4b1!4m6!3m5!1s0x346821aa58462329:0x70388168324bc224!8m2!3d25.0040642!4d121.2076766"
     },
     {
       name: "鳥仔咖 Bird Coffee & Noodle",
-      address: "桃園市桃園區",
-      hours: "10:30–19:00（週三公休）",
-      feature: "寵物鳥友善咖啡麵食館！無毒原木棲木、招牌重慶酸辣粉與手沖咖啡，鳥寶貝可同行入場",
-      unsplashImage: "/restaurants/bird_cafe_parrot.jpg",
-      website: "https://www.facebook.com/birdcoffee.tw/",
-      mapUrl: "https://maps.google.com/?q=鳥仔咖+Bird+Coffee+桃園"
+      address: "桃園市桃園區蓮埔街 53 號",
+      hours: "週四至週二 10:00–19:00（週三公休）",
+      feature: "桃園唯一鸚鵡咖啡廳！店長 MUJI 超親人，設有鳥寶放風區，招牌烏龍麵與格子鬆餅，歡迎攜帶自己的鳥寶同行",
+      unsplashImage: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.instagram.com/bird_coffee_noodle/",
+      mapUrl: "https://www.google.com/maps/place/%E9%B3%A5%E4%BB%94%E5%92%96/@25.0059671,121.2974674,17z/data=!3m1!4b1!4m6!3m5!1s0x34681f032358b657:0x787fbaf1c6183b8a!8m2!3d25.0059671!4d121.2974674"
     }
   ]
 };
