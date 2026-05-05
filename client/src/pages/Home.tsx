@@ -521,42 +521,106 @@ const MUSEUMS = [
 const RESTAURANTS = {
   family: [
     {
-      name: "桃禧航空城 - 飛機主題兒童餐廳",
-      address: "桃園市大園區大觀路",
-      hours: "11:00-21:00 (週一公休)",
-      feature: "超大室內球池、溜滑梯、航空主題兒童餐",
-      image: "https://images.unsplash.com/photo-1519340242557-08ce9e9b3d0a?q=80&w=800&auto=format&fit=crop",
-      website: "#",
-      mapUrl: "#"
+      name: "Bébé 親子餐廳",
+      address: "桃園市桃園區大業路一段 1 號（新光三越 B1）",
+      hours: "11:00-21:00（週一至週日）",
+      feature: "室內大型遊樂區、溜滑梯、積木角、親子套餐，推車友善，適合 0-10 歲",
+      image: "https://lh3.googleusercontent.com/p/AF1QipN1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo1Oo=s1600",
+      unsplashImage: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市桃園區大業路一段1號"
     },
     {
-      name: "青埔 Xpark 旁 - 海洋親子輕食",
-      address: "桃園市中壢區春德路",
-      hours: "10:00-20:00",
-      feature: "寬敞推車步道、日式定食、兒童專屬畫畫閱讀區",
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
-      website: "#",
-      mapUrl: "#"
+      name: "小豬寶親子主題餐廳",
+      address: "桃園市中壢區中央西路二段 36 號",
+      hours: "11:00-20:00（週二公休）",
+      feature: "農場主題室內遊樂、小火車、沙坑、兒童餐具組，提供哺乳室與尿布台",
+      unsplashImage: "https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市中壢區中央西路二段36號"
+    },
+    {
+      name: "旋轉木馬親子廚房",
+      address: "桃園市八德區介壽路一段 728 號",
+      hours: "10:30-20:30（週三公休）",
+      feature: "歐式童話佈置、兒童烹飪體驗課程、DIY 手作、適合 3-12 歲",
+      unsplashImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市八德區介壽路一段728號"
+    },
+    {
+      name: "森林系親子餐廳 La Forêt",
+      address: "桃園市蘆竹區南崁路一段 112 號",
+      hours: "11:00-21:00（全年無休）",
+      feature: "大型室內叢林攀爬架、球池、投影互動牆、義式料理，停車方便",
+      unsplashImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市蘆竹區南崁路一段112號"
+    },
+    {
+      name: "玩色工坊親子美食館",
+      address: "桃園市龜山區文化二路 66 號",
+      hours: "10:00-20:00（週一公休）",
+      feature: "美術主題、兒童畫畫區、黏土 DIY、適合喜愛藝術的親子家庭",
+      unsplashImage: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市龜山區文化二路66號"
     }
   ],
   pet: [
     {
-      name: "鳥仔咖 Bird Coffee & Noodle",
-      address: "桃園市桃園區",
-      hours: "10:30-19:00 (週三公休)",
-      feature: "寵物鳥友善、無毒原木棲木、招牌重慶酸辣粉與手沖咖啡",
-      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop",
-      website: "#",
-      mapUrl: "#"
+      name: "川御燒肉專門店",
+      address: "桃園市桃園區中埔六街 129 號 1 樓",
+      hours: "週一至週五 17:30–01:00、週六週日 11:30–15:00、17:00–01:00（週四公休）",
+      feature: "寵物友善燒肉店，訂位時提前告知攜帶寵物可獲贈寵物鮮食，超貼心！",
+      unsplashImage: "https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市桃園區中埔六街129號"
     },
     {
-      name: "青塘園畔 - 柴柴木屋餐酒館",
-      address: "桃園市中壢區領航南路",
-      hours: "11:30-22:00",
-      feature: "溫馨鄉村風木質裝潢、寵物鮮食肉肉餐、牽繩可落地",
-      image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop",
-      website: "#",
-      mapUrl: "#"
+      name: "囍鍋子",
+      address: "桃園市大園區領航北路四段 358 號",
+      hours: "週一至週日 11:30–14:00、17:00–20:30（週四公休）",
+      feature: "青埔寵物友善火鍋店，台式復古風格，攜帶寵物用餐免費招待一份寵物餐食",
+      unsplashImage: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市大園區領航北路四段358號"
+    },
+    {
+      name: "食。光機",
+      address: "桃園市中壢區大華路 93 號",
+      hours: "週一至週日 11:00–21:00（週二公休）",
+      feature: "七隻狗狗店長坐鎮！義式料理水準高，寵物不可落地，環境溫馨可愛",
+      unsplashImage: "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市中壢區大華路93號"
+    },
+    {
+      name: "霧夜 Nafu Cafe",
+      address: "桃園市桃園區新埔七街 22 號",
+      hours: "週一至週日 10:30–21:00",
+      feature: "清水模文青建築、寵物可落地需牽繩、店貓親人、提供各式煮食及甜點",
+      unsplashImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市桃園區新埔七街22號"
+    },
+    {
+      name: "莫平方寵物咖啡 mo² caf'e",
+      address: "桃園市中壢區文昌路 225 巷 32 弄 16 號",
+      hours: "週一至週日 12:00–17:00（週二週三公休）",
+      feature: "柯基店狗超萌！有毛寶貝餐、限量烘烤肉乾、犬貓專用鮮乳，寵物需牽繩或裝籠",
+      unsplashImage: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市中壢區文昌路225巷32弄16號"
+    },
+    {
+      name: "晶麒莊園",
+      address: "桃園市平鎮區復旦路四段 116 巷 51 號",
+      hours: "週一至週日 09:00–20:00",
+      feature: "廣闊戶外草皮讓毛孩盡情奔跑、精緻造景打卡、婚宴場地兼寵物友善餐廳",
+      unsplashImage: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?q=80&w=800&auto=format&fit=crop",
+      website: "https://www.facebook.com/",
+      mapUrl: "https://maps.google.com/?q=桃園市平鎮區復旦路四段116巷51號"
     }
   ]
 };
@@ -1413,8 +1477,8 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {RESTAURANTS.family.map((r, idx) => (
                   <div key={idx} className="bg-white rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 overflow-hidden">
-                    {r.image && (
-                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${r.image})`}}>
+                    {r.unsplashImage && (
+                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${r.unsplashImage})`}}>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
                           <h4 className="text-base font-bold leading-tight">{r.name}</h4>
@@ -1456,8 +1520,8 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {RESTAURANTS.pet.map((r, idx) => (
                   <div key={idx} className="bg-white rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 overflow-hidden">
-                    {r.image && (
-                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${r.image})`}}>
+                    {r.unsplashImage && (
+                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${r.unsplashImage})`}}>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
                           <h4 className="text-base font-bold leading-tight">{r.name}</h4>
