@@ -264,19 +264,19 @@ const DAILY_CONTENT = {
 };
 
 const TAOYUAN_REGIONS = [
-  { name: "桃園區", population: "40 萬+", populationNum: 40, universities: 3, feature: "市政中心、商業樞紐", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/02_taoyuan_center_63e177ba.jpg" },
-  { name: "中壢區", population: "40 萬+", populationNum: 40, universities: 5, feature: "交通樞紐、大學城", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/03_zhongyuan_university_f5fa6ba5.jpg" },
-  { name: "大園區", population: "12 萬+", populationNum: 12, universities: 0, feature: "機場所在、航空城核心", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/01_dayuan_airport_086501f0.jpg" },
-  { name: "大溪區", population: "8 萬+", populationNum: 8, universities: 0, feature: "古蹟豐富、文化底蘊", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/04_daxi_oldstreet_59a5ff70.jpg" },
-  { name: "觀音區", population: "8 萬+", populationNum: 8, universities: 0, feature: "客家村、海邊景點", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/05_guanyin_windmill_0ffd9519.jpg" },
-  { name: "龍潭區", population: "16 萬+", populationNum: 16, universities: 1, feature: "客家第一庄、文化深厚", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/06_longtan_flowers_8f1f377a.jpg" },
-  { name: "龜山區", population: "20 萬+", populationNum: 20, universities: 6, feature: "教育重鎮、大學集中" },
-  { name: "蘆竹區", population: "15 萬+", populationNum: 15, universities: 0, feature: "機場捷運、逆勢上漲" },
-  { name: "平鎮區", population: "20 萬+", populationNum: 20, universities: 1, feature: "客家重鎮、工業發達" },
-  { name: "八德區", population: "18 萬+", populationNum: 18, universities: 0, feature: "工業發達、發展迅速" },
-  { name: "楊梅區", population: "18 萬+", populationNum: 18, universities: 0, feature: "客家文化、農業發達" },
-  { name: "新屋區", population: "10 萬+", populationNum: 10, universities: 0, feature: "客家村、海邊景點" },
-  { name: "復興區", population: "1 萬+", populationNum: 1, universities: 0, feature: "泰雅族原住民、山林資源" },
+  { name: "桃園區", population: "40 萬+", populationNum: 40, universities: 0, studentCount: 0, feature: "市政中心、商業樞紐", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/02_taoyuan_center_63e177ba.jpg" },
+  { name: "中壢區", population: "40 萬+", populationNum: 40, universities: 5, studentCount: 54464, feature: "交通樞紐、大學城", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/03_zhongyuan_university_f5fa6ba5.jpg" },
+  { name: "大園區", population: "12 萬+", populationNum: 12, universities: 0, studentCount: 0, feature: "機場所在、航空城核心", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/01_dayuan_airport_086501f0.jpg" },
+  { name: "大溪區", population: "8 萬+", populationNum: 8, universities: 0, studentCount: 0, feature: "古蹟豐富、文化底蘊", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/04_daxi_oldstreet_59a5ff70.jpg" },
+  { name: "觀音區", population: "8 萬+", populationNum: 8, universities: 0, studentCount: 0, feature: "客家村、海邊景點", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/05_guanyin_windmill_0ffd9519.jpg" },
+  { name: "龍潭區", population: "16 萬+", populationNum: 16, universities: 1, studentCount: 638, feature: "客家第一庄、文化深厚", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/06_longtan_flowers_8f1f377a.jpg" },
+  { name: "龜山區", population: "20 萬+", populationNum: 20, universities: 5, studentCount: 44829, feature: "教育重鎮、大學集中" },
+  { name: "蘆竹區", population: "15 萬+", populationNum: 15, universities: 1, studentCount: 4465, feature: "機場捷運、逆勢上漲" },
+  { name: "平鎮區", population: "20 萬+", populationNum: 20, universities: 0, studentCount: 0, feature: "客家重鎮、工業發達" },
+  { name: "八德區", population: "18 萬+", populationNum: 18, universities: 0, studentCount: 0, feature: "工業發達、發展迅速" },
+  { name: "楊梅區", population: "18 萬+", populationNum: 18, universities: 0, studentCount: 0, feature: "客家文化、農業發達" },
+  { name: "新屋區", population: "10 萬+", populationNum: 10, universities: 0, studentCount: 0, feature: "客家村、海邊景點" },
+  { name: "復興區", population: "1 萬+", populationNum: 1, universities: 0, studentCount: 0, feature: "泰雅族原住民、山林資源" },
 ];
 
 const PARKS = [
@@ -1202,7 +1202,7 @@ export default function Home() {
 
             {/* 視覺化圖表 */}
             <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">📊 行政區人口與大學數量圖表</h3>
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">📊 行政區人口與大學學生人數圖表</h3>
               <p className="text-gray-500 text-sm mb-8">資料來源：桃園市政府民政局（2024年）、教育部大學校院概況統計</p>
 
               {/* 人口橫向條形圖 */}
@@ -1244,31 +1244,65 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* 大學數量泡泡圖 */}
+              {/* 大學在學學生人數橫向條形圖 */}
               <div>
-                <h4 className="text-xl font-bold text-gray-700 mb-5">🎓 各行政區大學數量</h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                  {TAOYUAN_REGIONS.filter(r => r.universities > 0).map((r, i) => (
-                    <div key={i} className="flex flex-col items-center bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-4 border border-teal-100 shadow-sm hover:shadow-md transition">
-                      <div
-                        className="rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 text-white font-black flex items-center justify-center shadow-lg mb-2"
-                        style={{ width: `${40 + r.universities * 12}px`, height: `${40 + r.universities * 12}px`, fontSize: `${14 + r.universities * 2}px` }}
-                      >
-                        {r.universities}
+                <h4 className="text-xl font-bold text-gray-700 mb-2">🎓 各行政區大學在學學生人數</h4>
+                <p className="text-xs text-gray-400 mb-5">資料來源：教育部大專校院校務資訊公開平台（114學年度）</p>
+                <div className="space-y-3">
+                  {[...TAOYUAN_REGIONS].filter(r => r.studentCount > 0).sort((a, b) => b.studentCount - a.studentCount).map((r, i) => {
+                    const maxStudents = 55000;
+                    const pct = Math.round((r.studentCount / maxStudents) * 100);
+                    const studentColors = [
+                      'from-purple-500 to-purple-400',
+                      'from-violet-500 to-violet-400',
+                      'from-indigo-500 to-indigo-400',
+                      'from-blue-400 to-blue-300',
+                    ];
+                    return (
+                      <div key={i} className="flex items-center gap-3">
+                        <div className="w-16 text-right text-sm font-semibold text-gray-700 shrink-0">{r.name}</div>
+                        <div className="flex-1 bg-gray-100 rounded-full h-7 overflow-hidden">
+                          <div
+                            className={`h-full rounded-full bg-gradient-to-r ${studentColors[i] || 'from-blue-300 to-blue-200'} flex items-center justify-end pr-2 transition-all duration-700`}
+                            style={{ width: `${Math.max(pct, 5)}%` }}
+                          >
+                            <span className="text-xs text-white font-bold drop-shadow">{r.studentCount.toLocaleString()} 人</span>
+                          </div>
+                        </div>
+                        <div className="w-20 text-xs text-gray-500 shrink-0">{r.universities} 所大學</div>
                       </div>
-                      <div className="text-sm font-bold text-gray-700 text-center">{r.name}</div>
-                      <div className="text-xs text-gray-500 text-center mt-1">{r.universities} 所大學</div>
-                    </div>
-                  ))}
-                  {TAOYUAN_REGIONS.filter(r => r.universities === 0).slice(0, 3).map((r, i) => (
-                    <div key={`no-${i}`} className="flex flex-col items-center bg-gray-50 rounded-2xl p-4 border border-gray-100 shadow-sm opacity-60">
-                      <div className="w-10 h-10 rounded-full bg-gray-200 text-gray-400 font-black flex items-center justify-center text-sm shadow mb-2">0</div>
-                      <div className="text-sm font-bold text-gray-500 text-center">{r.name}</div>
-                      <div className="text-xs text-gray-400 text-center mt-1">無大學</div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
-                <p className="text-xs text-gray-400 mt-4">＊龜山區 6 所（長庚、銘傳、輔仁等）、中壢區 5 所（中原、元智、中央、健行、萬能）、桃園區 3 所（開南、永達、桃園創新）</p>
+                <div className="mt-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-4 border border-purple-100">
+                  <p className="text-xs font-bold text-purple-700 mb-2">📋 各校學生人數明細（114學年度）</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600">
+                    <div>
+                      <p className="font-semibold text-purple-600 mb-1">🏫 中壢區（5所，共 54,464 人）</p>
+                      <p>・中原大學：16,404 人</p>
+                      <p>・國立中央大學：12,586 人</p>
+                      <p>・元智大學：9,333 人</p>
+                      <p>・健行科技大學：8,183 人</p>
+                      <p>・萬能科技大學：7,958 人</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-violet-600 mb-1">🏫 龜山區（5所，共 44,829 人）</p>
+                      <p>・銘傳大學：17,238 人</p>
+                      <p>・龍華科技大學：10,758 人</p>
+                      <p>・長庚大學：7,290 人</p>
+                      <p>・醒吾科技大學：5,468 人</p>
+                      <p>・景文科技大學：4,075 人</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-indigo-600 mb-1">🏫 蘆竹區（1所，共 4,465 人）</p>
+                      <p>・開南大學：4,465 人</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-blue-600 mb-1">🏫 龍潭區（1所，共 638 人）</p>
+                      <p>・聖約翰科技大學：638 人（退場中）</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
