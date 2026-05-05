@@ -1488,17 +1488,27 @@ export default function Home() {
                       <p className="text-xs text-gray-500 mb-1">📍 {r.address}</p>
                       <p className="text-xs text-gray-500 mb-2">⏰ {r.hours}</p>
                       <p className="text-sm text-[#2eb89f] font-medium mb-3">{r.feature}</p>
-                      <div className="flex gap-2 flex-wrap">
-                        {r.website && r.website !== "#" && (
-                          <a href={r.website} target="_blank" rel="noopener noreferrer"
-                            className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600 transition">
+                      <div className="flex gap-2 flex-wrap mt-2">
+                        {/* 官網按鈕：確保 r.website 存在且為有效字串才顯示 */}
+                        {r.website && (
+                          <a
+                            href={r.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-4 mr-2 bg-teal-500 text-white px-4 py-2 rounded-lg font-bold shadow-md hover:bg-teal-600 transition-colors text-xs"
+                          >
                             🌐 官網
                           </a>
                         )}
-                        {r.mapUrl && r.mapUrl !== "#" && (
-                          <a href={r.mapUrl} target="_blank" rel="noopener noreferrer"
-                            className="text-xs bg-orange-500 text-white px-3 py-1 rounded-full hover:bg-orange-600 transition">
-                            🗺️ 導航
+                        {/* 查看地圖按鈕：優先使用 r.mapUrl，若無則以 r.address 動態生成 */}
+                        {(r.mapUrl || r.address) && (
+                          <a
+                            href={r.mapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.address)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg font-bold shadow-md hover:bg-blue-600 transition-colors text-xs"
+                          >
+                            🗺️ 查看地圖
                           </a>
                         )}
                       </div>
@@ -1531,17 +1541,27 @@ export default function Home() {
                       <p className="text-xs text-gray-500 mb-1">📍 {r.address}</p>
                       <p className="text-xs text-gray-500 mb-2">⏰ {r.hours}</p>
                       <p className="text-sm text-[#2eb89f] font-medium mb-3">{r.feature}</p>
-                      <div className="flex gap-2 flex-wrap">
-                        {r.website && r.website !== "#" && (
-                          <a href={r.website} target="_blank" rel="noopener noreferrer"
-                            className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600 transition">
+                      <div className="flex gap-2 flex-wrap mt-2">
+                        {/* 官網按鈕：確保 r.website 存在且為有效字串才顯示 */}
+                        {r.website && (
+                          <a
+                            href={r.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-4 mr-2 bg-teal-500 text-white px-4 py-2 rounded-lg font-bold shadow-md hover:bg-teal-600 transition-colors text-xs"
+                          >
                             🌐 官網
                           </a>
                         )}
-                        {r.mapUrl && r.mapUrl !== "#" && (
-                          <a href={r.mapUrl} target="_blank" rel="noopener noreferrer"
-                            className="text-xs bg-orange-500 text-white px-3 py-1 rounded-full hover:bg-orange-600 transition">
-                            🗺️ 導航
+                        {/* 查看地圖按鈕：優先使用 r.mapUrl，若無則以 r.address 動態生成 */}
+                        {(r.mapUrl || r.address) && (
+                          <a
+                            href={r.mapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.address)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg font-bold shadow-md hover:bg-blue-600 transition-colors text-xs"
+                          >
+                            🗺️ 查看地圖
                           </a>
                         )}
                       </div>
