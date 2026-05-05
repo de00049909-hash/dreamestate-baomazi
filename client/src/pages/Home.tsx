@@ -517,6 +517,50 @@ const MUSEUMS = [
   },
 ];
 
+// 桃園美食推薦資料
+const RESTAURANTS = {
+  family: [
+    {
+      name: "桃禧航空城 - 飛機主題兒童餐廳",
+      address: "桃園市大園區大觀路",
+      hours: "11:00-21:00 (週一公休)",
+      feature: "超大室內球池、溜滑梯、航空主題兒童餐",
+      image: "https://images.unsplash.com/photo-1519340242557-08ce9e9b3d0a?q=80&w=800&auto=format&fit=crop",
+      website: "#",
+      mapUrl: "#"
+    },
+    {
+      name: "青埔 Xpark 旁 - 海洋親子輕食",
+      address: "桃園市中壢區春德路",
+      hours: "10:00-20:00",
+      feature: "寬敞推車步道、日式定食、兒童專屬畫畫閱讀區",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+      website: "#",
+      mapUrl: "#"
+    }
+  ],
+  pet: [
+    {
+      name: "鳥仔咖 Bird Coffee & Noodle",
+      address: "桃園市桃園區",
+      hours: "10:30-19:00 (週三公休)",
+      feature: "寵物鳥友善、無毒原木棲木、招牌重慶酸辣粉與手沖咖啡",
+      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop",
+      website: "#",
+      mapUrl: "#"
+    },
+    {
+      name: "青塘園畔 - 柴柴木屋餐酒館",
+      address: "桃園市中壢區領航南路",
+      hours: "11:30-22:00",
+      feature: "溫馨鄉村風木質裝潢、寵物鮮食肉肉餐、牽繩可落地",
+      image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop",
+      website: "#",
+      mapUrl: "#"
+    }
+  ]
+};
+
 const CINEMAS = [
   { name: "桃園藝術電影院", location: "桃園區", feature: "政府建立的免費電影院", details: "桃園市政府建立的免費電影院，提供市民免費觀看電影的場所。定期放映各類型電影，是桃園重要的文化設施。", website: "https://www.taoyuan.arts-cinema.com/" },
   { name: "中壢光影電影館", location: "中壢區", feature: "電影放映、文藝電影", details: "中壢地區的電影院，提供各類型電影放映服務。", website: "https://www.taoyuan.arts-cinema.com/" },
@@ -1367,12 +1411,37 @@ export default function Home() {
                 <p className="text-gray-500 text-sm">精選桃園各區親子友善餐廳，有兒童遊戲區、主題佈置，讓全家用餐輕鬆又愉快！</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* 親子餐廳卡片 - 資料待填入 */}
-                <div className="bg-gradient-to-br from-[#f0faf8] to-white rounded-xl border border-[#e8f5f1] p-6 text-center">
-                  <div className="text-4xl mb-3">🍽️</div>
-                  <p className="text-[#2eb89f] font-semibold text-sm">親子餐廳資料整理中</p>
-                  <p className="text-gray-400 text-xs mt-1">即將為您帶來桃園最棒的親子餐廳推薦！</p>
-                </div>
+                {RESTAURANTS.family.map((r, idx) => (
+                  <div key={idx} className="bg-white rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 overflow-hidden">
+                    {r.image && (
+                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${r.image})`}}>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                          <h4 className="text-base font-bold leading-tight">{r.name}</h4>
+                        </div>
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <p className="text-xs text-gray-500 mb-1">📍 {r.address}</p>
+                      <p className="text-xs text-gray-500 mb-2">⏰ {r.hours}</p>
+                      <p className="text-sm text-[#2eb89f] font-medium mb-3">{r.feature}</p>
+                      <div className="flex gap-2 flex-wrap">
+                        {r.website && r.website !== "#" && (
+                          <a href={r.website} target="_blank" rel="noopener noreferrer"
+                            className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600 transition">
+                            🌐 官網
+                          </a>
+                        )}
+                        {r.mapUrl && r.mapUrl !== "#" && (
+                          <a href={r.mapUrl} target="_blank" rel="noopener noreferrer"
+                            className="text-xs bg-orange-500 text-white px-3 py-1 rounded-full hover:bg-orange-600 transition">
+                            🗺️ 導航
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -1385,12 +1454,37 @@ export default function Home() {
                 <p className="text-gray-500 text-sm">允許攜帶毛孩入場，有寵物座位區或戶外空間，讓您與毛寶貝一起享用美食！</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* 寵物餐廳卡片 - 資料待填入 */}
-                <div className="bg-gradient-to-br from-[#f0faf8] to-white rounded-xl border border-[#e8f5f1] p-6 text-center">
-                  <div className="text-4xl mb-3">🐶</div>
-                  <p className="text-[#2eb89f] font-semibold text-sm">寵物友善餐廳資料整理中</p>
-                  <p className="text-gray-400 text-xs mt-1">即將為您帶來桃園最棒的寵物友善餐廳推薦！</p>
-                </div>
+                {RESTAURANTS.pet.map((r, idx) => (
+                  <div key={idx} className="bg-white rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 overflow-hidden">
+                    {r.image && (
+                      <div className="relative h-44 bg-cover bg-center" style={{backgroundImage: `url(${r.image})`}}>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                          <h4 className="text-base font-bold leading-tight">{r.name}</h4>
+                        </div>
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <p className="text-xs text-gray-500 mb-1">📍 {r.address}</p>
+                      <p className="text-xs text-gray-500 mb-2">⏰ {r.hours}</p>
+                      <p className="text-sm text-[#2eb89f] font-medium mb-3">{r.feature}</p>
+                      <div className="flex gap-2 flex-wrap">
+                        {r.website && r.website !== "#" && (
+                          <a href={r.website} target="_blank" rel="noopener noreferrer"
+                            className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full hover:bg-blue-600 transition">
+                            🌐 官網
+                          </a>
+                        )}
+                        {r.mapUrl && r.mapUrl !== "#" && (
+                          <a href={r.mapUrl} target="_blank" rel="noopener noreferrer"
+                            className="text-xs bg-orange-500 text-white px-3 py-1 rounded-full hover:bg-orange-600 transition">
+                            🗺️ 導航
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
 
