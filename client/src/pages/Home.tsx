@@ -1199,9 +1199,182 @@ export default function Home() {
                 ))}
               </div>
             </section>
+
+            {/* 人口與民族結構 */}
+            <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">👥 人口與民族結構</h3>
+              <p className="text-gray-500 text-sm mb-8">資料來源：桃園市政府民政局（2024年）、行政院客家委員會</p>
+
+              {/* 總人口概覽 */}
+              <div className="bg-gradient-to-r from-[#f0faf8] to-[#e8f5f1] rounded-xl p-6 mb-8 flex flex-col md:flex-row items-center gap-6">
+                <div className="text-center">
+                  <p className="text-5xl font-black text-[#2eb89f]">230<span className="text-3xl">萬+</span></p>
+                  <p className="text-gray-600 mt-1 font-medium">桃園市總人口</p>
+                  <p className="text-xs text-gray-400 mt-1">全台第六大直轄市</p>
+                </div>
+                <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                  <div className="bg-white rounded-lg p-3 shadow-sm">
+                    <p className="text-2xl font-bold text-orange-500">55%</p>
+                    <p className="text-xs text-gray-600 mt-1">閩南族群</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm">
+                    <p className="text-2xl font-bold text-green-600">30%</p>
+                    <p className="text-xs text-gray-600 mt-1">客家族群</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm">
+                    <p className="text-2xl font-bold text-blue-500">8%</p>
+                    <p className="text-xs text-gray-600 mt-1">外省眷村</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm">
+                    <p className="text-2xl font-bold text-purple-500">7%</p>
+                    <p className="text-xs text-gray-600 mt-1">新住民 / 原住民</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 民族結構表 */}
+              <div className="overflow-x-auto mb-10">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-[#2eb89f] text-white">
+                      <th className="px-4 py-3 text-left rounded-tl-lg">族群</th>
+                      <th className="px-4 py-3 text-center">比例</th>
+                      <th className="px-4 py-3 text-left">主要聚居區</th>
+                      <th className="px-4 py-3 text-left rounded-tr-lg">代表文化</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-orange-50 border-b border-orange-100">
+                      <td className="px-4 py-3 font-bold text-orange-700">🏮 閩南人</td>
+                      <td className="px-4 py-3 text-center font-bold text-orange-600">約 55%</td>
+                      <td className="px-4 py-3 text-gray-700">桃園區、中壢區、蘆竹區</td>
+                      <td className="px-4 py-3 text-gray-700">媽祖信仰、廟會文化、閩南語</td>
+                    </tr>
+                    <tr className="bg-green-50 border-b border-green-100">
+                      <td className="px-4 py-3 font-bold text-green-700">🎋 客家人</td>
+                      <td className="px-4 py-3 text-center font-bold text-green-600">約 30%</td>
+                      <td className="px-4 py-3 text-gray-700">龍潭、平鎮、楊梅、觀音、新屋</td>
+                      <td className="px-4 py-3 text-gray-700">義民節、擂茶、客家語、硬頸精神</td>
+                    </tr>
+                    <tr className="bg-blue-50 border-b border-blue-100">
+                      <td className="px-4 py-3 font-bold text-blue-700">🏡 外省眷村</td>
+                      <td className="px-4 py-3 text-center font-bold text-blue-600">約 8%</td>
+                      <td className="px-4 py-3 text-gray-700">龍岡、大溪太武新村、八德</td>
+                      <td className="px-4 py-3 text-gray-700">眷村文化、外省料理、多省方言</td>
+                    </tr>
+                    <tr className="bg-purple-50 border-b border-purple-100">
+                      <td className="px-4 py-3 font-bold text-purple-700">🌏 新住民</td>
+                      <td className="px-4 py-3 text-center font-bold text-purple-600">約 5%</td>
+                      <td className="px-4 py-3 text-gray-700">中壢、平鎮（東南亞聚落）</td>
+                      <td className="px-4 py-3 text-gray-700">多元飲食、東南亞語言文化</td>
+                    </tr>
+                    <tr className="bg-yellow-50">
+                      <td className="px-4 py-3 font-bold text-yellow-700">🏔️ 泰雅族原住民</td>
+                      <td className="px-4 py-3 text-center font-bold text-yellow-600">約 1%</td>
+                      <td className="px-4 py-3 text-gray-700">復興區</td>
+                      <td className="px-4 py-3 text-gray-700">織布文化、山林智慧、祖靈信仰</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* 各民族文化特色卡片 */}
+              <h4 className="text-xl font-bold text-gray-800 mb-6">🎨 各族群文化特色</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="rounded-xl overflow-hidden border border-orange-200 shadow-sm hover:shadow-md transition">
+                  <div className="bg-gradient-to-r from-orange-400 to-orange-500 p-4 text-white">
+                    <p className="text-2xl mb-1">🏮</p>
+                    <h5 className="text-lg font-bold">閩南文化</h5>
+                    <p className="text-sm opacity-90">桃園最大族群，約 55%</p>
+                  </div>
+                  <div className="p-4 bg-orange-50">
+                    <ul className="text-sm text-gray-700 space-y-2">
+                      <li>🙏 <strong>信仰中心：</strong>桃園景福宮（桃園媽）、中壢仁海宮，廟會文化熱鬧非凡</li>
+                      <li>🎭 <strong>傳統藝術：</strong>歌仔戲、布袋戲、陣頭表演</li>
+                      <li>🍜 <strong>代表美食：</strong>肉圓、米苔目、碗粿、蚵仔麵線</li>
+                      <li>📍 <strong>文化地標：</strong>桃園老街、大廟周邊商圈</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden border border-green-200 shadow-sm hover:shadow-md transition">
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 text-white">
+                    <p className="text-2xl mb-1">🎋</p>
+                    <h5 className="text-lg font-bold">客家文化</h5>
+                    <p className="text-sm opacity-90">全台客家人口最多的城市，約 30%</p>
+                  </div>
+                  <div className="p-4 bg-green-50">
+                    <ul className="text-sm text-gray-700 space-y-2">
+                      <li>🏮 <strong>年度盛典：</strong>義民節（農曆七月），龍潭、楊梅、平鎮盛大舉辦</li>
+                      <li>🍵 <strong>代表美食：</strong>擂茶、客家小炒、薑絲大腸、簧條</li>
+                      <li>🎵 <strong>傳統藝術：</strong>客家山歌、採茶戲、八音</li>
+                      <li>📍 <strong>文化地標：</strong>龍潭大池、桃園客家文化館、新屋綠色隧道</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden border border-blue-200 shadow-sm hover:shadow-md transition">
+                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 text-white">
+                    <p className="text-2xl mb-1">🏡</p>
+                    <h5 className="text-lg font-bold">眷村文化</h5>
+                    <p className="text-sm opacity-90">全台眷村密度最高城市，約 8%</p>
+                  </div>
+                  <div className="p-4 bg-blue-50">
+                    <ul className="text-sm text-gray-700 space-y-2">
+                      <li>🏛️ <strong>歷史背景：</strong>1949 年後大批軍民隨政府遷台，桃園設有大量眷村</li>
+                      <li>🍜 <strong>代表美食：</strong>眷村牛肉麵、山東饅頭、各省家常菜</li>
+                      <li>🎬 <strong>文化地標：</strong>龍岡忠貞市場（滇緬料理）、大溪太武新村</li>
+                      <li>📚 <strong>文化保存：</strong>多處眷村已活化為文創園區與博物館</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden border border-purple-200 shadow-sm hover:shadow-md transition">
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 text-white">
+                    <p className="text-2xl mb-1">🌏</p>
+                    <h5 className="text-lg font-bold">新住民文化</h5>
+                    <p className="text-sm opacity-90">全台新住民人口最多城市，約 5%</p>
+                  </div>
+                  <div className="p-4 bg-purple-50">
+                    <ul className="text-sm text-gray-700 space-y-2">
+                      <li>🌍 <strong>主要來源：</strong>越南、印尼、泰國、菲律賓等東南亞國家</li>
+                      <li>🍜 <strong>代表美食：</strong>越南河粉、印尼炒飯、緬甸料理</li>
+                      <li>🎊 <strong>文化活動：</strong>多元文化節、新住民語言學習中心</li>
+                      <li>📍 <strong>聚落中心：</strong>中壢區忠貞路、平鎮區南勢地區</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden border border-yellow-200 shadow-sm hover:shadow-md transition">
+                  <div className="bg-gradient-to-r from-yellow-500 to-amber-500 p-4 text-white">
+                    <p className="text-2xl mb-1">🏔️</p>
+                    <h5 className="text-lg font-bold">泰雅族文化</h5>
+                    <p className="text-sm opacity-90">復興區原住民族，約 1%</p>
+                  </div>
+                  <div className="p-4 bg-yellow-50">
+                    <ul className="text-sm text-gray-700 space-y-2">
+                      <li>🧵 <strong>傳統工藝：</strong>泰雅織布（Lokah），以菱形紋為代表圖騰</li>
+                      <li>🌿 <strong>山林智慧：</strong>狩獵文化、傳統農耕、山林採集知識</li>
+                      <li>🎵 <strong>傳統藝術：</strong>口簧琴、獵祭歌謠、口傳神話</li>
+                      <li>📍 <strong>文化地標：</strong>復興區角板山、拉拉山、達觀山自然保護區</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden border border-teal-200 shadow-sm hover:shadow-md transition">
+                  <div className="bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] p-4 text-white">
+                    <p className="text-2xl mb-1">🌈</p>
+                    <h5 className="text-lg font-bold">多元融合的桃園</h5>
+                    <p className="text-sm opacity-90">台灣最多元文化的城市</p>
+                  </div>
+                  <div className="p-4 bg-teal-50">
+                    <ul className="text-sm text-gray-700 space-y-2">
+                      <li>🏆 <strong>全台第一：</strong>新住民人口最多、客家人口最多、眷村密度最高</li>
+                      <li>🎊 <strong>節慶豐富：</strong>媽祖遶境、義民節、眷村文化節、新住民文化節</li>
+                      <li>🍽️ <strong>美食多元：</strong>一個城市吃遍閩、客、外省、東南亞、原住民料理</li>
+                      <li>🤝 <strong>和諧共存：</strong>多元族群在桃園共同打造宜居城市</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         )}
-
         {/* Parks Tab */}
         {activeTab === "parks" && (
           <div className="space-y-12">
