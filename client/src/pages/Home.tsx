@@ -264,19 +264,19 @@ const DAILY_CONTENT = {
 };
 
 const TAOYUAN_REGIONS = [
-  { name: "桃園區", population: "40 萬+", feature: "市政中心、商業樞紐", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/02_taoyuan_center_63e177ba.jpg" },
-  { name: "中壢區", population: "40 萬+", feature: "交通樞紐、大學城", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/03_zhongyuan_university_f5fa6ba5.jpg" },
-  { name: "大園區", population: "12 萬+", feature: "機場所在、航空城核心", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/01_dayuan_airport_086501f0.jpg" },
-  { name: "大溪區", population: "8 萬+", feature: "古蹟豐富、文化底蘊", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/04_daxi_oldstreet_59a5ff70.jpg" },
-  { name: "觀音區", population: "8 萬+", feature: "客家村、海邊景點", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/05_guanyin_windmill_0ffd9519.jpg" },
-  { name: "龍潭區", population: "16 萬+", feature: "客家第一庄、文化深厚", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/06_longtan_flowers_8f1f377a.jpg" },
-  { name: "龜山區", population: "20 萬+", feature: "教育重鎮、大學集中" },
-  { name: "蘆竹區", population: "15 萬+", feature: "機場捷運、逆勢上漲" },
-  { name: "平鎮區", population: "20 萬+", feature: "客家重鎮、工業發達" },
-  { name: "八德區", population: "18 萬+", feature: "工業發達、發展迅速" },
-  { name: "楊梅區", population: "18 萬+", feature: "客家文化、農業發達" },
-  { name: "新屋區", population: "10 萬+", feature: "客家村、海邊景點" },
-  { name: "復興區", population: "1 萬+", feature: "泰雅族原住民、山林資源" },
+  { name: "桃園區", population: "40 萬+", populationNum: 40, universities: 3, feature: "市政中心、商業樞紐", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/02_taoyuan_center_63e177ba.jpg" },
+  { name: "中壢區", population: "40 萬+", populationNum: 40, universities: 5, feature: "交通樞紐、大學城", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/03_zhongyuan_university_f5fa6ba5.jpg" },
+  { name: "大園區", population: "12 萬+", populationNum: 12, universities: 0, feature: "機場所在、航空城核心", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/01_dayuan_airport_086501f0.jpg" },
+  { name: "大溪區", population: "8 萬+", populationNum: 8, universities: 0, feature: "古蹟豐富、文化底蘊", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/04_daxi_oldstreet_59a5ff70.jpg" },
+  { name: "觀音區", population: "8 萬+", populationNum: 8, universities: 0, feature: "客家村、海邊景點", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/05_guanyin_windmill_0ffd9519.jpg" },
+  { name: "龍潭區", population: "16 萬+", populationNum: 16, universities: 1, feature: "客家第一庄、文化深厚", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/06_longtan_flowers_8f1f377a.jpg" },
+  { name: "龜山區", population: "20 萬+", populationNum: 20, universities: 6, feature: "教育重鎮、大學集中" },
+  { name: "蘆竹區", population: "15 萬+", populationNum: 15, universities: 0, feature: "機場捷運、逆勢上漲" },
+  { name: "平鎮區", population: "20 萬+", populationNum: 20, universities: 1, feature: "客家重鎮、工業發達" },
+  { name: "八德區", population: "18 萬+", populationNum: 18, universities: 0, feature: "工業發達、發展迅速" },
+  { name: "楊梅區", population: "18 萬+", populationNum: 18, universities: 0, feature: "客家文化、農業發達" },
+  { name: "新屋區", population: "10 萬+", populationNum: 10, universities: 0, feature: "客家村、海邊景點" },
+  { name: "復興區", population: "1 萬+", populationNum: 1, universities: 0, feature: "泰雅族原住民、山林資源" },
 ];
 
 const PARKS = [
@@ -1197,6 +1197,78 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </section>
+
+            {/* 視覺化圖表 */}
+            <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">📊 行政區人口與大學數量圖表</h3>
+              <p className="text-gray-500 text-sm mb-8">資料來源：桃園市政府民政局（2024年）、教育部大學校院概況統計</p>
+
+              {/* 人口橫向條形圖 */}
+              <div className="mb-10">
+                <h4 className="text-xl font-bold text-gray-700 mb-5">🏙️ 各行政區人口數（萬人）</h4>
+                <div className="space-y-3">
+                  {[...TAOYUAN_REGIONS].sort((a, b) => b.populationNum - a.populationNum).map((r, i) => {
+                    const maxPop = 40;
+                    const pct = Math.round((r.populationNum / maxPop) * 100);
+                    const colors = [
+                      'from-teal-500 to-teal-400',
+                      'from-teal-500 to-teal-400',
+                      'from-emerald-500 to-emerald-400',
+                      'from-emerald-500 to-emerald-400',
+                      'from-green-500 to-green-400',
+                      'from-green-500 to-green-400',
+                      'from-cyan-500 to-cyan-400',
+                      'from-cyan-500 to-cyan-400',
+                      'from-sky-500 to-sky-400',
+                      'from-sky-500 to-sky-400',
+                      'from-blue-400 to-blue-300',
+                      'from-blue-400 to-blue-300',
+                      'from-indigo-300 to-indigo-200',
+                    ];
+                    return (
+                      <div key={i} className="flex items-center gap-3">
+                        <div className="w-16 text-right text-sm font-semibold text-gray-700 shrink-0">{r.name}</div>
+                        <div className="flex-1 bg-gray-100 rounded-full h-7 overflow-hidden">
+                          <div
+                            className={`h-full rounded-full bg-gradient-to-r ${colors[i]} flex items-center justify-end pr-2 transition-all duration-700`}
+                            style={{ width: `${pct}%` }}
+                          >
+                            <span className="text-xs text-white font-bold drop-shadow">{r.population}</span>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* 大學數量泡泡圖 */}
+              <div>
+                <h4 className="text-xl font-bold text-gray-700 mb-5">🎓 各行政區大學數量</h4>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {TAOYUAN_REGIONS.filter(r => r.universities > 0).map((r, i) => (
+                    <div key={i} className="flex flex-col items-center bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-4 border border-teal-100 shadow-sm hover:shadow-md transition">
+                      <div
+                        className="rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 text-white font-black flex items-center justify-center shadow-lg mb-2"
+                        style={{ width: `${40 + r.universities * 12}px`, height: `${40 + r.universities * 12}px`, fontSize: `${14 + r.universities * 2}px` }}
+                      >
+                        {r.universities}
+                      </div>
+                      <div className="text-sm font-bold text-gray-700 text-center">{r.name}</div>
+                      <div className="text-xs text-gray-500 text-center mt-1">{r.universities} 所大學</div>
+                    </div>
+                  ))}
+                  {TAOYUAN_REGIONS.filter(r => r.universities === 0).slice(0, 3).map((r, i) => (
+                    <div key={`no-${i}`} className="flex flex-col items-center bg-gray-50 rounded-2xl p-4 border border-gray-100 shadow-sm opacity-60">
+                      <div className="w-10 h-10 rounded-full bg-gray-200 text-gray-400 font-black flex items-center justify-center text-sm shadow mb-2">0</div>
+                      <div className="text-sm font-bold text-gray-500 text-center">{r.name}</div>
+                      <div className="text-xs text-gray-400 text-center mt-1">無大學</div>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-400 mt-4">＊龜山區 6 所（長庚、銘傳、輔仁等）、中壢區 5 所（中原、元智、中央、健行、萬能）、桃園區 3 所（開南、永達、桃園創新）</p>
               </div>
             </section>
 
