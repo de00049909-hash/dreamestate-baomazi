@@ -693,6 +693,34 @@ export default function Home() {
   const { identity, isLoaded, saveIdentity } = useVisitorIdentity();
 
   const [activeTab, setActiveTab] = useState("home");
+
+  // 2026 年桃園重大交通建設資料
+  const trafficProjects = [
+    {
+      id: 'green-line',
+      name: '🚄 桃園捷運綠線',
+      status: '北段預計 2026 年底通車',
+      desc: '串聯桃園市區至大園，全長 27.8 公里共 21 站，大幅提升在地生活機能，沿線房市備受矚目。'
+    },
+    {
+      id: 'railway',
+      name: '🚉 桃園鐵路地下化工程',
+      status: '工程積極進行中',
+      desc: '消除市區平交道、縫合都市景觀，完工後將帶動桃園站周邊大規模都市更新。'
+    },
+    {
+      id: 'aviation-city',
+      name: '✈️ 航空城特區建設',
+      status: '2026 年底完成先建後遷',
+      desc: '台灣最大國家建設，預計 2027 年全面動工，帶動大園、蘆竹等地區產業與就業成長。'
+    },
+    {
+      id: 'taoyuan-metro',
+      name: '🟢 捷運綠線延伸中壢',
+      status: '規劃審查階段',
+      desc: '從 G01 建德興豐站向南延伸，串聯中壢火車站，預期大幅提升中壢區交通便利性。'
+    }
+  ];
   const [selectedMonthlyCard, setSelectedMonthlyCard] = useState<any>(null);
   const [message, setMessage] = useState("");
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
@@ -1407,6 +1435,20 @@ export default function Home() {
         {/* Transportation Tab */}
         {activeTab === "transportation" && (
           <div className="space-y-12">
+            {/* 2026 重大交通建設區塊 */}
+            <div className="mt-8 p-4 bg-white rounded-xl shadow-lg border-2 border-gray-100">
+              <h2 className="text-2xl font-bold mb-6 text-gray-800">🚧 2026 桃園重大交通建設</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {trafficProjects.map((project) => (
+                  <div key={project.id} className="p-6 border-2 border-teal-500 rounded-lg shadow-md hover:shadow-xl transition-shadow bg-teal-50">
+                    <h3 className="text-xl font-bold text-teal-800">{project.name}</h3>
+                    <p className="font-bold text-blue-600 mt-2">目前進度：{project.status}</p>
+                    <p className="text-gray-700 mt-2">{project.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-400 mt-4 text-right">來源出處：桃園市政府捷運工程局 / 桃園市政府</p>
+            </div>
             <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
               <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-8">🚆 交通運輸</h3>
               
