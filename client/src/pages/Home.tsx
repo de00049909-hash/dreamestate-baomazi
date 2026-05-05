@@ -694,6 +694,45 @@ export default function Home() {
 
   const [activeTab, setActiveTab] = useState("home");
 
+  // 桃園歷史地理發展時間軸資料
+  const historyTimelines = [
+    {
+      year: '1683',
+      title: '清朝漢人入墾',
+      description: '清朝時期漢人大量入墾桃澗堡（今桃園、中壢一帶），開墾水田，奠定農業基礎。'
+    },
+    {
+      year: '1895',
+      title: '日治時期建設起步',
+      description: '日本統治後積極建設基礎設施，縱貫鐵路通車（1903年），桃園成為北台灣重要交通節點。'
+    },
+    {
+      year: '1945',
+      title: '光復後行政建制',
+      description: '台灣光復，桃園設縣，逐步發展工業區，吸引大量移民定居，人口快速成長。'
+    },
+    {
+      year: '1989',
+      title: '中壢火車站發展',
+      description: '中壢成為桃園南區最重要的交通與商業樞紐，每日旅客量龐大，帶動周邊商圈繁榮。'
+    },
+    {
+      year: '2003',
+      title: '桃園國際機場擴建',
+      description: '桃園國際機場第二航廈啟用，桃園成為台灣對外的重要門戶，帶動大園、蘆竹地區發展。'
+    },
+    {
+      year: '2014',
+      title: '升格直轄市',
+      description: '桃園縣正式升格為桃園市，成為台灣第六都，行政資源大幅提升，建設腳步加快。'
+    },
+    {
+      year: '2026',
+      title: '重大建設匯聚',
+      description: '捷運綠線北段通車在即，航空城計畫推進，鐵路地下化工程積極進行，桃園迎來新一波都市發展高峰。'
+    }
+  ];
+
   // 2026 年桃園重大交通建設資料
   const trafficProjects = [
     {
@@ -1005,6 +1044,22 @@ export default function Home() {
         {/* Taoyuan Tab */}
         {activeTab === "taoyuan" && (
           <div className="space-y-12">
+            {/* 歷史地理發展時間軸 */}
+            <div className="mt-8 p-6 bg-white rounded-xl shadow-lg border-2 border-gray-100">
+              <h2 className="text-2xl font-bold mb-6 text-gray-800">📜 認識桃園 — 歷史地理發展</h2>
+              <div className="space-y-4">
+                {historyTimelines.map((item, index) => (
+                  <div key={index} className="flex flex-col md:flex-row bg-gray-50 p-4 rounded-lg border-l-4 border-teal-500">
+                    <div className="text-teal-700 font-bold text-xl md:w-32">{item.year}</div>
+                    <div>
+                      <h3 className="font-bold text-gray-800 text-lg">{item.title}</h3>
+                      <p className="text-gray-600 mt-1">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-400 mt-4 text-right">來源出處：桃園市政府 / 中華民國行政院</p>
+            </div>
             {/* Taoyuan Map Section */}
             <section className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#e8f5f1]">
               <div className="relative h-96 bg-cover bg-center" style={{backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663233628580/JXigwX25GvVGNV8cNtEmFs/taoyuan_district_map-VtmL98corSPqBsrV8K7oqD.webp)`}}>
