@@ -932,63 +932,90 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Monthly Featured Selections */}
+            {/* 桃園三大硬實力 */}
             <section className="bg-gradient-to-br from-white via-[#f0faf8] to-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
-              <div className="mb-8">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="bg-[#2eb89f] text-white text-xs font-bold px-3 py-1 rounded-full">2026 年 5 月</span>
-                </div>
-                <h3 className="text-4xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-3">🗓️ 每月精選</h3>
-                <p className="text-gray-600 text-lg">焦點區域 × 房市話題 深度解析</p>
+              <div className="mb-8 text-center">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">🏆 桃園三大硬實力</h3>
+                <p className="text-gray-500 text-sm">選擇桃園，就是選擇最穩健的生活基盤</p>
               </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-2xl shadow-md p-6 border-2 border-[#e8f5f1] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="text-5xl mb-4 text-center">⛰️</div>
+                  <h4 className="text-xl font-bold text-[#1f8b7f] mb-3 text-center">全台地質最穩</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">桃園台地地形平坦，無活動斷層通過市區，是全台灣地質條件最穩定的都會區之一。有山（復興山區）有海（觀音、新屋），自然資源豐沛。</p>
+                  <div className="bg-[#f0faf8] rounded-lg p-3">
+                    <p className="text-xs text-gray-500">📋 來源出處：經濟部地質調查及礦業管理中心</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-2xl shadow-md p-6 border-2 border-[#e8f5f1] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="text-5xl mb-4 text-center">🚆</div>
+                  <h4 className="text-xl font-bold text-[#1f8b7f] mb-3 text-center">三鐵共構樞紐</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-3">桃園是全台唯一擁有<strong>高鐵 × 台鐵 × 機場捷運</strong>三鐵共構的城市，交通便利程度全台頂尖。</p>
+                  <div className="space-y-1.5 mb-4">
+                    <div className="flex items-center gap-2 text-xs text-gray-700"><span className="w-2 h-2 rounded-full bg-orange-400 flex-shrink-0"></span>高鐵桃園站 — 台北 20 分鐘</div>
+                    <div className="flex items-center gap-2 text-xs text-gray-700"><span className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></span>台鐵縱貴線 — 地下化工程進行中</div>
+                    <div className="flex items-center gap-2 text-xs text-gray-700"><span className="w-2 h-2 rounded-full bg-[#2eb89f] flex-shrink-0"></span>機捷 A1~A21 — 直達桃園機場（A12a 第三航廈、A13 第一航廈）</div>
+                    <div className="flex items-center gap-2 text-xs text-gray-700"><span className="w-2 h-2 rounded-full bg-purple-400 flex-shrink-0"></span>捷運綠線 — 北段近期通車</div>
+                  </div>
+                  <div className="bg-[#f0faf8] rounded-lg p-3">
+                    <p className="text-xs text-gray-500">📋 來源出處：桃園市政府交通局</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-2xl shadow-md p-6 border-2 border-[#e8f5f1] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="text-5xl mb-4 text-center">🏮</div>
+                  <h4 className="text-xl font-bold text-[#1f8b7f] mb-3 text-center">多元複合文化</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-3">桃園是台灣最多元的城市，閩南、客家、眷村、原住民、新住民文化在此交融，形成獨特的複合城市魅力。</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-red-50 text-red-600 text-xs px-2 py-1 rounded-full border border-red-200">🏯 閩南文化</span>
+                    <span className="bg-green-50 text-green-600 text-xs px-2 py-1 rounded-full border border-green-200">🎋 客家文化</span>
+                    <span className="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded-full border border-blue-200">✈️ 眷村文化</span>
+                    <span className="bg-yellow-50 text-yellow-600 text-xs px-2 py-1 rounded-full border border-yellow-200">🌏 新住民</span>
+                  </div>
+                  <div className="bg-[#f0faf8] rounded-lg p-3">
+                    <p className="text-xs text-gray-500">📋 來源出處：桃園市政府文化局</p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {MONTHLY_CARDS.map((card) => (
+            {/* 桃園 13 區互動地圖 */}
+            <section className="bg-white rounded-2xl shadow-lg p-8 border border-[#e8f5f1]">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-1">🗺️ 桃園 13 行政區一覽</h3>
+                <p className="text-gray-500 text-sm">點擊各區卡片，查看人口與大學資訊</p>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                {[
+                  { name: "桃園區", pop: "46.8 萬", univ: 1, color: "from-teal-400 to-teal-600", emoji: "🏙️" },
+                  { name: "中壢區", pop: "43.5 萬", univ: 4, color: "from-blue-400 to-blue-600", emoji: "🎓" },
+                  { name: "八德區", pop: "22.8 萬", univ: 0, color: "from-green-400 to-green-600", emoji: "🌿" },
+                  { name: "蘆竹區", pop: "19.8 萬", univ: 0, color: "from-emerald-400 to-emerald-600", emoji: "🌾" },
+                  { name: "龜山區", pop: "18.9 萬", univ: 3, color: "from-cyan-400 to-cyan-600", emoji: "🏫" },
+                  { name: "平鎮區", pop: "22.3 萬", univ: 1, color: "from-sky-400 to-sky-600", emoji: "🏘️" },
+                  { name: "楊梅區", pop: "17.5 萬", univ: 1, color: "from-lime-400 to-lime-600", emoji: "🌳" },
+                  { name: "大溪區", pop: "10.0 萬", univ: 0, color: "from-amber-400 to-amber-600", emoji: "🏯" },
+                  { name: "龍潭區", pop: "12.5 萬", univ: 1, color: "from-orange-400 to-orange-600", emoji: "🐉" },
+                  { name: "大園區", pop: "10.3 萬", univ: 0, color: "from-violet-400 to-violet-600", emoji: "✈️" },
+                  { name: "觀音區", pop: "7.5 萬", univ: 0, color: "from-pink-400 to-pink-600", emoji: "🌊" },
+                  { name: "新屋區", pop: "5.0 萬", univ: 0, color: "from-rose-400 to-rose-600", emoji: "🌻" },
+                  { name: "復興區", pop: "1.2 萬", univ: 0, color: "from-indigo-400 to-indigo-600", emoji: "⛰️" },
+                ].map((district) => (
                   <div
-                    key={card.id}
-                    onClick={() => setSelectedMonthlyCard(card)}
-                    className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] cursor-pointer bg-white"
+                    key={district.name}
+                    className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                   >
-                    <div className="relative h-52 overflow-hidden">
-                      <img
-                        loading="lazy"
-                        src={card.image}
-                        alt={card.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                      {card.imageSource && (
-                        <div className="absolute top-2 right-2 bg-black/50 text-white text-[10px] px-2 py-0.5 rounded-full">
-                          {card.imageSource}
-                        </div>
-                      )}
+                    <div className={`bg-gradient-to-br ${district.color} p-4 text-white`}>
+                      <div className="text-2xl mb-1">{district.emoji}</div>
+                      <div className="font-bold text-sm">{district.name}</div>
                     </div>
-                    <div className="p-5">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-2xl">{card.icon}</span>
-                        <span className="bg-[#2eb89f] text-white text-xs font-bold px-3 py-1 rounded-full">{card.tag}</span>
-                      </div>
-                      <h4 className="text-gray-900 font-bold text-xl mb-1 leading-tight">{card.title}</h4>
-                      <p className="text-gray-500 text-sm mb-4">{card.subtitle}</p>
-                      <div className="flex items-center text-[#2eb89f] text-sm font-semibold">
-                        <span>點擊查看完整內容</span>
-                        <span className="ml-1 group-hover:translate-x-1 transition">&rarr;</span>
-                      </div>
+                    <div className="bg-white p-3 border-t border-gray-100">
+                      <div className="text-xs text-gray-600">👥 人口：<span className="font-bold text-gray-800">{district.pop}</span></div>
+                      <div className="text-xs text-gray-600 mt-1">🎓 大學：<span className="font-bold text-[#2eb89f]">{district.univ > 0 ? `${district.univ} 所` : "無"}</span></div>
                     </div>
                   </div>
                 ))}
               </div>
-
-              <div className="mt-8 text-center">
-                <p className="text-[#1f8b7f] font-bold text-lg mb-4">💚 想更深入了解桃園的美好嗎？</p>
-                <a
-                  href="https://page.line.me/768fuhqm"
-                  target="_blank"
-                  className="inline-block px-8 py-3 bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white font-bold rounded-lg hover:shadow-lg transition duration-300"
-                >
-                  加 LINE 探索更多
-                </a>
-              </div>
+              <p className="text-xs text-gray-400 mt-4 text-right">📋 來源出處：桃園市政府民政局 / 教育部統計處（2024年）</p>
             </section>
 
             {/* Daily Content */}
@@ -1834,6 +1861,33 @@ export default function Home() {
         {/* Daily Tab */}
         {activeTab === "daily" && (
           <div className="space-y-12">
+            {/* 夢想小編私釀旅遊短影音 */}
+            <section className="bg-gradient-to-br from-white via-[#f0faf8] to-white rounded-2xl shadow-lg p-8 border border-[#e8f5f1]">
+              <div className="mb-6">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">🎥 夢想小編私釀旅遊行程</h3>
+                <p className="text-gray-500 text-sm">精選桃園最心機的旅遊路線，帶你規劃完美周末</p>
+              </div>
+              {/* YouTube 短影音嵌入 */}
+              <div className="relative w-full pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md mb-6">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/vDNbJqQ2Hjo?rel=0"
+                  title="夢想小編私釀旅遊行程"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="bg-[#f0faf8] rounded-xl p-4 border border-[#e8f5f1]">
+                <p className="text-sm text-[#1f8b7f] font-semibold mb-1">💡 小編小証言</p>
+                <p className="text-gray-600 text-sm">桃園不只是住家的地方，更是週末出遊的天堂！山、海、古街、小市集、小店家…每個週末都有新驚喜。歡迎加官方 LINE 詢問旅遊資訊！</p>
+                <a href="https://page.line.me/768fuhqm" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 px-4 py-2 bg-[#2eb89f] text-white text-sm font-bold rounded-lg hover:bg-[#1f8b7f] transition">
+                  💬 加 LINE 詢問旅遊資訊
+                </a>
+              </div>
+            </section>
+
+            {/* 每日報馬仙4 內容 */}
             <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
               <div className="mb-8">
                 <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-2">{todayContent.title}</h3>
@@ -1855,6 +1909,156 @@ export default function Home() {
                 ))}
               </div>
             </section>
+          </div>
+        )}
+
+        {/* 育兒補助 Tab */}
+        {activeTab === "subsidy-childcare" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-[#e8f5f1]">
+              <h2 className="text-2xl font-bold text-[#1f8b7f] mb-2">👶 桃園育兒補助</h2>
+              <p className="text-gray-500 text-sm mb-6">桃園市政府提供多項育兒補助，減輕家長育兒負擔</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {[
+                  { icon: "👶", title: "公共托育補助", desc: "送托公共托嬰機構，每月最高補助 3,000 元" },
+                  { icon: "🏠", title: "居家保母補助", desc: "委託合格居家保母，每月最高補助 3,000 元" },
+                  { icon: "🎓", title: "幼兒園補助", desc: "就讀公立幼兒園，每月補助學費差額" },
+                  { icon: "❤️", title: "張老師補助", desc: "小孩由祖父母照顧，每月最高補助 2,500 元" },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-[#f0faf8] rounded-xl border border-[#e8f5f1]">
+                    <div className="text-3xl flex-shrink-0">{item.icon}</div>
+                    <div>
+                      <h4 className="font-bold text-[#1f8b7f] mb-1">{item.title}</h4>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://e-services.tycg.gov.tw/TycgOnline/tycgOnline.action?func=applyList&aid=a47f1b22-d50b-4473-9073-3eebdbfccdc4&unitCode=&cdnCache=Y" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white font-bold rounded-xl hover:shadow-lg transition">
+                💻 前往桃園市政府線上申辦
+              </a>
+              <p className="text-xs text-gray-400 mt-3">📋 來源出處：桃園市政府結婚生育處</p>
+            </div>
+          </div>
+        )}
+
+        {/* 生育補助 Tab */}
+        {activeTab === "subsidy-birth" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-[#e8f5f1]">
+              <h2 className="text-2xl font-bold text-[#1f8b7f] mb-2">🍼 桃園生育補助</h2>
+              <p className="text-gray-500 text-sm mb-6">在桃園生孩，政府送上滿满的祝福與補助</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {[
+                  { icon: "🎁", title: "生育獎勵金", desc: "第一胎 2 萬元、第二胎 4 萬元、第三胎以上 6 萬元" },
+                  { icon: "🏥", title: "生育醫療補助", desc: "孕期健檢、生產費用補助，最高補助 2 萬元" },
+                  { icon: "👶", title: "新生児訪視服務", desc: "專業保健員到家訪視，提供育兒咨詢" },
+                  { icon: "💰", title: "小孩醫療補助", desc: "未滿 6 歲小孩門診、住院補助，最高補助 2,500 元/年" },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-[#f0faf8] rounded-xl border border-[#e8f5f1]">
+                    <div className="text-3xl flex-shrink-0">{item.icon}</div>
+                    <div>
+                      <h4 className="font-bold text-[#1f8b7f] mb-1">{item.title}</h4>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://e-services.tycg.gov.tw/TycgOnline/tycgOnline.action?func=applyList&aid=a47f1b22-d50b-4473-9073-3eebdbfccdc4&unitCode=&cdnCache=Y" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white font-bold rounded-xl hover:shadow-lg transition">
+                💻 前往桃園市政府線上申辦
+              </a>
+              <p className="text-xs text-gray-400 mt-3">📋 來源出處：桃園市政府結婚生育處</p>
+            </div>
+          </div>
+        )}
+
+        {/* 敬老福利 Tab */}
+        {activeTab === "subsidy-elderly" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-[#e8f5f1]">
+              <h2 className="text-2xl font-bold text-[#1f8b7f] mb-2">👴 桃園敬老福利</h2>
+              <p className="text-gray-500 text-sm mb-6">桃園市政府用心照顧每一位銀髮族</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {[
+                  { icon: "🚌", title: "敬老愛心卡乘車優惠", desc: "滿 65 歲享公車、捷運優惠，每月補助 800 點社福點數" },
+                  { icon: "🏥", title: "長期照護補助", desc: "需要照護的長者，提供居家、機構等多元照護補助" },
+                  { icon: "💰", title: "中低收入老人津貼", desc: "符合資格長者每月可領取生活津貼，減輕家庭經濟負擔" },
+                  { icon: "🍽️", title: "銀髮小吃部服務", desc: "独居、行動不便長者，提供居家送餐服務" },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-[#f0faf8] rounded-xl border border-[#e8f5f1]">
+                    <div className="text-3xl flex-shrink-0">{item.icon}</div>
+                    <div>
+                      <h4 className="font-bold text-[#1f8b7f] mb-1">{item.title}</h4>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://e-services.tycg.gov.tw/TycgOnline/tycgOnline.action?func=applyList&aid=4d5c6590-8cf1-44fd-9a1e-2cab441e39ca&unitCode=&cdnCache=Y" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white font-bold rounded-xl hover:shadow-lg transition">
+                💻 前往桃園市政府線上申辦
+              </a>
+              <p className="text-xs text-gray-400 mt-3">📋 來源出處：桃園市政府社會局</p>
+            </div>
+          </div>
+        )}
+
+        {/* 租屋補助 Tab */}
+        {activeTab === "subsidy-rent" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-[#e8f5f1]">
+              <h2 className="text-2xl font-bold text-[#1f8b7f] mb-2">🏠 桃園租屋補助</h2>
+              <p className="text-gray-500 text-sm mb-6">桃園市政府提供多項租屋補助，讓安家更輕鬆</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {[
+                  { icon: "🏠", title: "租金補助", desc: "符合資格戶籍，每月最高補助 5,000 元" },
+                  { icon: "👨‍👩‍👧", title: "家庭租屋補助", desc: "有未成年子女家庭，每月最高補助 6,000 元" },
+                  { icon: "👶", title: "小孩家庭加碼", desc: "有 12 歲以下子女家庭额外加碼補助" },
+                  { icon: "💳", title: "小家庭補助方案", desc: "内政部小家庭租金補助，每月最高補助 8,000 元" },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-[#f0faf8] rounded-xl border border-[#e8f5f1]">
+                    <div className="text-3xl flex-shrink-0">{item.icon}</div>
+                    <div>
+                      <h4 className="font-bold text-[#1f8b7f] mb-1">{item.title}</h4>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://e-services.tycg.gov.tw/TycgOnline/tycgOnline.action?func=applyList&aid=b90333f4-619b-4229-9a3a-51124187275d&unitCode=&cdnCache=Y" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white font-bold rounded-xl hover:shadow-lg transition">
+                💻 前往桃園市政府線上申辦
+              </a>
+              <p className="text-xs text-gray-400 mt-3">📋 來源出處：桃園市政府住宅發展處</p>
+            </div>
+          </div>
+        )}
+
+        {/* 中低收入補助 Tab */}
+        {activeTab === "subsidy-lowincome" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-[#e8f5f1]">
+              <h2 className="text-2xl font-bold text-[#1f8b7f] mb-2">💰 中低收入補助</h2>
+              <p className="text-gray-500 text-sm mb-6">桃園市政府社會救助資源，綜合照顧弱勢家庭</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {[
+                  { icon: "💵", title: "低收入户生活津貼", desc: "每月最高補助 17,405 元（滿 65 歲另加老人生活津貼）" },
+                  { icon: "🏥", title: "醫療補助", desc: "低收入户就醫自負額補助，最高補助 5 萬元/年" },
+                  { icon: "🎓", title: "學費補助", desc: "就讀各學段學費補助，減輕教育負擔" },
+                  { icon: "📊", title: "中低收入資格認定", desc: "向各區公所申請，專業社工評估家庭狀況" },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-[#f0faf8] rounded-xl border border-[#e8f5f1]">
+                    <div className="text-3xl flex-shrink-0">{item.icon}</div>
+                    <div>
+                      <h4 className="font-bold text-[#1f8b7f] mb-1">{item.title}</h4>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://e-services.tycg.gov.tw/TycgOnline/tycgOnline.action?func=home&qword=社會救助&cdnCache=Y" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white font-bold rounded-xl hover:shadow-lg transition">
+                💻 前往桃園市政府線上申辦
+              </a>
+              <p className="text-xs text-gray-400 mt-3">📋 來源出處：桃園市政府社會局</p>
+            </div>
           </div>
         )}
 

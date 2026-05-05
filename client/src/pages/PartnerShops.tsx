@@ -1,12 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { ChevronLeft } from "lucide-react";
 import { useState } from "react";
-import { useLocation } from "wouter";
 import { toast } from "sonner";
+import Navbar from "@/components/Navbar";
 
 export default function PartnerShops() {
-  const [, setLocation] = useLocation();
   const [formData, setFormData] = useState({
     shopName: "",
     phone: "",
@@ -44,20 +42,8 @@ export default function PartnerShops() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#e8f5f3] to-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="container flex items-center justify-between h-16">
-          <button
-            onClick={() => setLocation("/")}
-            className="flex items-center gap-2 text-[#26a69a] hover:text-[#1b8a7e] transition"
-          >
-            <ChevronLeft className="w-5 h-5" />
-            <span className="font-medium">返回</span>
-          </button>
-          <h1 className="text-xl font-bold text-gray-900">夢想不動產 特約商店</h1>
-          <div className="w-12" />
-        </div>
-      </header>
+      {/* Shared Navbar */}
+      <Navbar />
 
       {/* Main Content */}
       <main className="container py-12">

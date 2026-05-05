@@ -102,7 +102,7 @@ export default function Navbar({ activeTab = "home", setActiveTab }: NavbarProps
                 setOpenDropdown(openDropdown === "taoyuan" ? null : "taoyuan")
               }
               className={`px-4 py-2 rounded-lg transition duration-200 flex items-center gap-1 whitespace-nowrap ${
-                ["taoyuan", "transportation"].includes(activeTab)
+                ["taoyuan", "transportation", "subsidy-childcare", "subsidy-birth", "subsidy-elderly", "subsidy-rent", "subsidy-lowincome"].includes(activeTab)
                   ? "bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] text-white shadow-md"
                   : openDropdown === "taoyuan"
                   ? "bg-[#f0faf8] text-[#2eb89f]"
@@ -119,7 +119,8 @@ export default function Navbar({ activeTab = "home", setActiveTab }: NavbarProps
               </span>
             </button>
             {openDropdown === "taoyuan" && (
-              <div className="absolute top-[calc(100%+6px)] left-0 bg-white rounded-xl shadow-xl border border-gray-100 py-1.5 min-w-[150px] z-50">
+              <div className="absolute top-[calc(100%+6px)] left-0 bg-white rounded-xl shadow-xl border border-gray-100 py-1.5 min-w-[170px] z-50">
+                {/* 基本介紹 */}
                 {[
                   { key: "taoyuan", label: "📜 歷史地理" },
                   { key: "transportation", label: "🚄 交通建設" },
@@ -136,15 +137,33 @@ export default function Navbar({ activeTab = "home", setActiveTab }: NavbarProps
                     {item.label}
                   </button>
                 ))}
-                <a
-                  href="https://e-services.tycg.gov.tw/TycgOnline/tycgOnline.action?func=home&qword=&cdnCache=Y"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setOpenDropdown(null)}
-                  className="block w-full text-left px-4 py-2 text-sm transition duration-150 whitespace-nowrap text-gray-700 hover:bg-[#f0faf8] hover:text-[#2eb89f]"
-                >
-                  💰 相關補助
-                </a>
+
+                {/* 分隔線 + 補助群組標題 */}
+                <div className="mx-3 my-1.5 border-t border-gray-100"></div>
+                <div className="px-4 py-1 text-[11px] font-semibold text-gray-400 uppercase tracking-wide">
+                  桃園人專屬福利
+                </div>
+
+                {/* 補助子項目 */}
+                {[
+                  { key: "subsidy-childcare", label: "👶 桃園育兒補助" },
+                  { key: "subsidy-birth", label: "🍼 生育補助" },
+                  { key: "subsidy-elderly", label: "👴 敬老福利" },
+                  { key: "subsidy-rent", label: "🏠 租屋補助" },
+                  { key: "subsidy-lowincome", label: "💰 中低收入補助" },
+                ].map((item) => (
+                  <button
+                    key={item.key}
+                    onClick={() => handleTabClick(item.key)}
+                    className={`block w-full text-left px-4 py-2 text-sm transition duration-150 whitespace-nowrap ${
+                      activeTab === item.key
+                        ? "text-[#1f8b7f] font-semibold bg-[#f0faf8]"
+                        : "text-gray-700 hover:bg-[#f0faf8] hover:text-[#2eb89f]"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
               </div>
             )}
           </div>
@@ -209,7 +228,7 @@ export default function Navbar({ activeTab = "home", setActiveTab }: NavbarProps
             🎁 特約商店
           </a>
 
-          {/* 在地情報 直連 */}
+          {/* 夢想小編私釀旅遊行程 + 短影音 */}
           <button
             onClick={() => handleTabClick("daily")}
             className={`px-4 py-2 rounded-lg transition duration-200 whitespace-nowrap ${
@@ -218,7 +237,7 @@ export default function Navbar({ activeTab = "home", setActiveTab }: NavbarProps
                 : "text-gray-600 hover:bg-[#f0faf8]"
             }`}
           >
-            📰 在地情報
+            🎬 旅遊短影音
           </button>
         </nav>
       </div>
