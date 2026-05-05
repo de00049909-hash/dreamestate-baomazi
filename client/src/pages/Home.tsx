@@ -1355,25 +1355,6 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Cultural Attractions */}
-            <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-[#2eb89f] to-[#1f8b7f] bg-clip-text text-transparent mb-8">🎨 文創園區</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {CULTURAL_ATTRACTIONS.map((attraction: any, idx: number) => (
-                  <div 
-                    key={idx} 
-                    onClick={() => setSelectedEvent(attraction)}
-                    className="bg-gradient-to-br from-[#f0faf8] to-white p-6 rounded-xl border border-[#e8f5f1] hover:shadow-lg transition duration-300 hover:translate-y-[-4px] cursor-pointer"
-                  >
-                    <h4 className="text-lg font-bold text-[#1f8b7f] mb-2">{attraction.name}</h4>
-                    <p className="text-gray-600 text-sm mb-2">📍 {attraction.location}</p>
-                    <p className="text-gray-600 text-sm mb-3">{attraction.feature}</p>
-                    {attraction.hours && <p className="text-xs text-gray-500 mb-2">⏰ {attraction.hours}</p>}
-                    <p className="text-xs text-[#2eb89f] font-medium">👉 點擊查看詳情</p>
-                  </div>
-                ))}
-              </div>
-            </section>
 
             {/* Cinemas */}
             <section className="bg-white rounded-2xl shadow-lg p-10 border border-[#e8f5f1]">
